@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 Exciting Vacation Destinations</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #0099FF;
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        h2 {
+            color: #0099FF;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .destinations {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .destination-column {
+            padding: 10px;
+        }
+        
+        .destination-column ul {
+            list-style: none;
+        }
+        
+        .destination-column li {
+            padding: 5px 0;
+            color: #333;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        
+        .airports {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .state-section {
+            margin-bottom: 20px;
+        }
+        
+        .state-name {
+            font-weight: bold;
+            color: #333;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .city-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .city-list li {
+            color: #666;
+            font-size: 13px;
+            padding: 2px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .destinations,
+            .airports {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 20px;
+            }
+            
+            h2 {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Over 23 Exciting Vacation Destinations</h1>
+        
+        <div class="destinations">
+            <div class="destination-column">
+                <ul>
+                    <li>Las Vegas</li>
+                    <li>Reno</li>
+                    <li>Phoenix</li>
+                    <li>Denver</li>
+                    <li>Chicago</li>
+                    <li>Atlantic City (Flying into Philadelphia, PA)</li>
+                    <li>Orlando</li>
+                </ul>
+            </div>
+            
+            <div class="destination-column">
+                <ul>
+                    <li>Miami</li>
+                    <li>Tampa</li>
+                    <li>Ft Lauderdale</li>
+                    <li>Atlanta</li>
+                    <li>Baltimore</li>
+                    <li>Washington DC</li>
+                    <li>Minneapolis</li>
+                    <li>St Louis</li>
+                </ul>
+            </div>
+            
+            <div class="destination-column">
+                <ul>
+                    <li>Los Angeles</li>
+                    <li>Anaheim</li>
+                    <li>San Diego</li>
+                    <li>New Orleans</li>
+                    <li>Philadelphia</li>
+                    <li>Dallas</li>
+                    <li>Houston</li>
+                    <li>Nashville</li>
+                </ul>
+            </div>
+        </div>
+        
+        <h2>Participating Departure Airports</h2>
+        
+        <div class="airports">
+            <div class="airport-column">
+                <div class="state-section">
+                    <div class="state-name">Alabama</div>
+                    <ul class="city-list">
+                        <li>Birmingham</li>
+                        <li>Mobile</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Arizona</div>
+                    <ul class="city-list">
+                        <li>Phoenix</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Arkansas</div>
+                    <ul class="city-list">
+                        <li>Little Rock</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">California</div>
+                    <ul class="city-list">
+                        <li>Oakland</li>
+                        <li>Sacramento</li>
+                        <li>San Francisco</li>
+                        <li>San Jose</li>
+                        <li>San Diego</li>
+                        <li>Los Angeles (LAX)</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Colorado</div>
+                    <ul class="city-list">
+                        <li>Denver</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Connecticut</div>
+                    <ul class="city-list">
+                        <li>Hartford</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Delaware</div>
+                    <ul class="city-list">
+                        <li>Dover</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Florida</div>
+                    <ul class="city-list">
+                        <li>Jacksonville</li>
+                        <li>Miami</li>
+                        <li>Orlando</li>
+                        <li>Tampa</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Georgia</div>
+                    <ul class="city-list">
+                        <li>Atlanta</li>
+                        <li>Savannah</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Idaho</div>
+                    <ul class="city-list">
+                        <li>Boise</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Illinois</div>
+                    <ul class="city-list">
+                        <li>Chicago</li>
+                        <li>Springfield</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Indiana</div>
+                    <ul class="city-list">
+                        <li>Indianapolis</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Iowa</div>
+                    <ul class="city-list">
+                        <li>Cedar Rapids</li>
+                        <li>Des Moines</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Kansas</div>
+                    <ul class="city-list">
+                        <li>Wichita</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Kentucky</div>
+                    <ul class="city-list">
+                        <li>Lexington</li>
+                        <li>Louisville</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Louisiana</div>
+                    <ul class="city-list">
+                        <li>Baton Rouge</li>
+                        <li>New Orleans</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="airport-column">
+                <div class="state-section">
+                    <div class="state-name">Maine</div>
+                    <ul class="city-list">
+                        <li>Bangor</li>
+                        <li>Portland</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Maryland</div>
+                    <ul class="city-list">
+                        <li>Baltimore</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Massachusetts</div>
+                    <ul class="city-list">
+                        <li>Boston</li>
+                        <li>Springfield</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Michigan</div>
+                    <ul class="city-list">
+                        <li>Grand Rapids</li>
+                        <li>Detroit</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Minnesota</div>
+                    <ul class="city-list">
+                        <li>Minneapolis</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Mississippi</div>
+                    <ul class="city-list">
+                        <li>Jackson</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Missouri</div>
+                    <ul class="city-list">
+                        <li>Kansas City</li>
+                        <li>St Louis</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Montana</div>
+                    <ul class="city-list">
+                        <li>Billings</li>
+                        <li>Great Falls</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Nebraska</div>
+                    <ul class="city-list">
+                        <li>Omaha</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Nevada</div>
+                    <ul class="city-list">
+                        <li>Las Vegas</li>
+                        <li>Reno</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">New Hampshire</div>
+                    <ul class="city-list">
+                        <li>Manchester</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">New Jersey</div>
+                    <ul class="city-list">
+                        <li>Newark</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">New Mexico</div>
+                    <ul class="city-list">
+                        <li>Albuquerque</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">New York</div>
+                    <ul class="city-list">
+                        <li>Buffalo</li>
+                        <li>Rochester</li>
+                        <li>Syracuse</li>
+                        <li>Albany</li>
+                        <li>New York</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">North Carolina</div>
+                    <ul class="city-list">
+                        <li>Raleigh/Durham</li>
+                        <li>Charlotte/Concord</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">North Dakota</div>
+                    <ul class="city-list">
+                        <li>Bismarck</li>
+                        <li>Fargo</li>
+                        <li>Grand Forks</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="airport-column">
+                <div class="state-section">
+                    <div class="state-name">Ohio</div>
+                    <ul class="city-list">
+                        <li>Cleveland</li>
+                        <li>Columbus</li>
+                        <li>Cincinnati</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Oklahoma</div>
+                    <ul class="city-list">
+                        <li>Oklahoma City</li>
+                        <li>Tulsa</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Oregon</div>
+                    <ul class="city-list">
+                        <li>Portland</li>
+                        <li>Eugene</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Pennsylvania</div>
+                    <ul class="city-list">
+                        <li>Pittsburgh</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Philadelphia</div>
+                    <ul class="city-list">
+                        <li>Harrisburg</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Rhode Island</div>
+                    <ul class="city-list">
+                        <li>Providence</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">South Carolina</div>
+                    <ul class="city-list">
+                        <li>Columbia</li>
+                        <li>Charleston</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">South Dakota</div>
+                    <ul class="city-list">
+                        <li>Sioux Falls</li>
+                        <li>Rapid City</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Tennessee</div>
+                    <ul class="city-list">
+                        <li>Nashville</li>
+                        <li>Memphis</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Texas</div>
+                    <ul class="city-list">
+                        <li>Dallas</li>
+                        <li>El Paso</li>
+                        <li>Austin</li>
+                        <li>San Antonio</li>
+                        <li>Houston</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Utah</div>
+                    <ul class="city-list">
+                        <li>Salt Lake City</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Virginia</div>
+                    <ul class="city-list">
+                        <li>Richmond</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Washington</div>
+                    <ul class="city-list">
+                        <li>Seattle</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">West Virginia</div>
+                    <ul class="city-list">
+                        <li>Huntington</li>
+                    </ul>
+                </div>
+                
+                <div class="state-section">
+                    <div class="state-name">Wisconsin</div>
+                    <ul class="city-list">
+                        <li>Milwaukee</li>
+                        <li>Green Bay</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
