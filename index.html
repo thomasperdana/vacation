@@ -11,30 +11,32 @@
             background-color: #f4f4f4;
             color: #333;
         }
-        header {
-            background-color: #333;
+        .hero {
+            background: linear-gradient(45deg, #6DD5FA, #FF758C);
             color: #fff;
-            padding: 1rem;
             text-align: center;
+            padding: 100px 20px;
         }
-        nav {
-            background: #444;
-            padding: 1rem;
+        .hero-content h1 {
+            font-size: 3.5em;
+            margin-bottom: 0.5em;
         }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            text-align: center;
+        .hero-content p {
+            font-size: 1.5em;
+            margin-bottom: 2em;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 15px;
-        }
-        nav a {
-            color: #fff;
+        .hero-button {
+            background-color: #fff;
+            color: #333;
+            padding: 15px 30px;
             text-decoration: none;
+            border-radius: 5px;
             font-weight: bold;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .hero-button:hover {
+            background-color: #f0f0f0;
         }
         .container {
             padding: 2rem;
@@ -65,16 +67,16 @@
 </head>
 <body>
 
-    <header>
-        <h1>Explore Our Vacation Packages</h1>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Explore Our Vacation Packages</h1>
+            <p>Your next adventure awaits. Choose your ideal getaway.</p>
+            <nav>
+                <a href="2nights.html" class="hero-button">2-Night Getaway</a>
+                <a href="7days.html" class="hero-button">7-Day Adventure</a>
+            </nav>
+        </div>
     </header>
-
-    <nav>
-        <ul>
-            <li><a href="2nights.html">2-Night Getaway 23 Destinations</a></li> <br/>
-            <li><a href="7days.html">7-Day Adventure 3,500 Destinations</a></li>
-        </ul>
-    </nav>
 
     <div class="container">
         <h2>Plan Your Perfect Trip</h2>
