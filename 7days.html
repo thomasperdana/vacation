@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Hotel.md</title>
+<title>Hotels Organized by State and Continent</title>
 <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
 
 <style>
@@ -19,1908 +19,1956 @@ body {
 	word-wrap: break-word;
 }
 
-#code-csp-warning {
-	position: fixed;
-	top: 0;
-	right: 0;
-	color: white;
-	margin: 16px;
-	text-align: center;
-	font-size: 12px;
-	font-family: sans-serif;
-	background-color:#444444;
-	cursor: pointer;
-	padding: 6px;
-	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	color: #2c5aa0;
+	margin-top: 40px;
 }
 
-#code-csp-warning:hover {
-	text-decoration: none;
-	background-color:#007acc;
-	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+h2 {
+	font-weight: bold;
+	color: #d4511e;
+	margin-top: 30px;
+	padding-left: 20px;
+	border-left: 5px solid #d4511e;
 }
 
-body.scrollBeyondLastLine {
-	margin-bottom: calc(100vh - 22px);
+h3 {
+	font-weight: normal;
+	color: #2c5aa0;
+	margin-top: 20px;
+	padding-left: 15px;
 }
 
-body.showEditorSelection .code-line {
-	position: relative;
+h4 {
+	color: #666;
+	margin-left: 30px;
 }
 
-body.showEditorSelection .code-active-line:before,
-body.showEditorSelection .code-line:hover:before {
-	content: "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: -12px;
-	height: 100%;
+ul {
+	margin-left: 50px;
+	list-style-type: square;
 }
 
-body.showEditorSelection li.code-active-line:before,
-body.showEditorSelection li.code-line:hover:before {
-	left: -30px;
+li {
+	margin: 5px 0;
+	line-height: 1.6;
 }
 
-.vscode-light.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.15);
+.continent {
+	background-color: #f5f5f5;
+	padding: 20px;
+	margin: 20px 0;
+	border-radius: 8px;
 }
 
-.vscode-light.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(0, 0, 0, 0.40);
+.state {
+	background-color: #e8f4f8;
+	padding: 15px;
+	margin: 15px 0;
+	border-radius: 6px;
 }
 
-.vscode-light.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-dark.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.4);
-}
-
-.vscode-dark.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 255, 255, 0.60);
-}
-
-.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-.vscode-high-contrast.showEditorSelection .code-active-line:before {
-	border-left: 3px solid rgba(255, 160, 0, 0.7);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line:hover:before {
-	border-left: 3px solid rgba(255, 160, 0, 1);
-}
-
-.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
-	border-left: none;
-}
-
-img {
-	max-width: 100%;
-	max-height: 100%;
-}
-
-a {
-	text-decoration: none;
-}
-
-a:hover {
-	text-decoration: underline;
-}
-
-a:focus,
-input:focus,
-select:focus,
-textarea:focus {
-	outline: 1px solid -webkit-focus-ring-color;
-	outline-offset: -1px;
+.country {
+	background-color: #fff;
+	padding: 10px;
+	margin: 10px 0;
+	border-left: 3px solid #2c5aa0;
 }
 
 hr {
 	border: 0;
 	height: 2px;
 	border-bottom: 2px solid;
+	margin: 40px 0;
 }
 
-h1 {
-	padding-bottom: 0.3em;
-	line-height: 1.2;
-	border-bottom-width: 1px;
-	border-bottom-style: solid;
+a {
+	text-decoration: none;
+	color: #0066cc;
 }
 
-h1, h2, h3 {
-	font-weight: normal;
+a:hover {
+	text-decoration: underline;
 }
 
-table {
-	border-collapse: collapse;
+.toc {
+	background-color: #f9f9f9;
+	padding: 20px;
+	border-radius: 8px;
+	margin-bottom: 40px;
 }
 
-table > thead > tr > th {
-	text-align: left;
-	border-bottom: 1px solid;
+.toc h2 {
+	border: none;
+	padding: 0;
+	color: #333;
 }
 
-table > thead > tr > th,
-table > thead > tr > td,
-table > tbody > tr > th,
-table > tbody > tr > td {
-	padding: 5px 10px;
-}
-
-table > tbody > tr + tr > td {
-	border-top: 1px solid;
-}
-
-blockquote {
-	margin: 0 7px 0 5px;
-	padding: 0 16px 0 10px;
-	border-left-width: 5px;
-	border-left-style: solid;
-}
-
-code {
-	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
-	font-size: 1em;
-	line-height: 1.357em;
-}
-
-body.wordWrap pre {
-	white-space: pre-wrap;
-}
-
-pre:not(.hljs),
-pre.hljs code > div {
-	padding: 16px;
-	border-radius: 3px;
-	overflow: auto;
-}
-
-pre code {
-	color: var(--vscode-editor-foreground);
-	tab-size: 4;
-}
-
-/** Theming */
-
-.vscode-light pre {
-	background-color: rgba(220, 220, 220, 0.4);
-}
-
-.vscode-dark pre {
-	background-color: rgba(10, 10, 10, 0.4);
-}
-
-.vscode-high-contrast pre {
-	background-color: rgb(0, 0, 0);
-}
-
-.vscode-high-contrast h1 {
-	border-color: rgb(0, 0, 0);
-}
-
-.vscode-light table > thead > tr > th {
-	border-color: rgba(0, 0, 0, 0.69);
-}
-
-.vscode-dark table > thead > tr > th {
-	border-color: rgba(255, 255, 255, 0.69);
-}
-
-.vscode-light h1,
-.vscode-light hr,
-.vscode-light table > tbody > tr + tr > td {
-	border-color: rgba(0, 0, 0, 0.18);
-}
-
-.vscode-dark h1,
-.vscode-dark hr,
-.vscode-dark table > tbody > tr + tr > td {
-	border-color: rgba(255, 255, 255, 0.18);
+.toc ul {
+	margin-left: 20px;
 }
 
 </style>
 
-<style>
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-
-/* Tomorrow Comment */
-.hljs-comment,
-.hljs-quote {
-	color: #8e908c;
-}
-
-/* Tomorrow Red */
-.hljs-variable,
-.hljs-template-variable,
-.hljs-tag,
-.hljs-name,
-.hljs-selector-id,
-.hljs-selector-class,
-.hljs-regexp,
-.hljs-deletion {
-	color: #c82829;
-}
-
-/* Tomorrow Orange */
-.hljs-number,
-.hljs-built_in,
-.hljs-builtin-name,
-.hljs-literal,
-.hljs-type,
-.hljs-params,
-.hljs-meta,
-.hljs-link {
-	color: #f5871f;
-}
-
-/* Tomorrow Yellow */
-.hljs-attribute {
-	color: #eab700;
-}
-
-/* Tomorrow Green */
-.hljs-string,
-.hljs-symbol,
-.hljs-bullet,
-.hljs-addition {
-	color: #718c00;
-}
-
-/* Tomorrow Blue */
-.hljs-title,
-.hljs-section {
-	color: #4271ae;
-}
-
-/* Tomorrow Purple */
-.hljs-keyword,
-.hljs-selector-tag {
-	color: #8959a8;
-}
-
-.hljs {
-	display: block;
-	overflow-x: auto;
-	color: #4d4d4c;
-	padding: 0.5em;
-}
-
-.hljs-emphasis {
-	font-style: italic;
-}
-
-.hljs-strong {
-	font-weight: bold;
-}
-</style>
-
-<style>
-/*
- * Markdown PDF CSS
- */
-
- body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
-	padding: 0 12px;
-}
-
-pre {
-	background-color: #f8f8f8;
-	border: 1px solid #cccccc;
-	border-radius: 3px;
-	overflow-x: auto;
-	white-space: pre-wrap;
-	overflow-wrap: break-word;
-}
-
-pre:not(.hljs) {
-	padding: 23px;
-	line-height: 19px;
-}
-
-blockquote {
-	background: rgba(127, 127, 127, 0.1);
-	border-color: rgba(0, 122, 204, 0.5);
-}
-
-.emoji {
-	height: 1.4em;
-}
-
-code {
-	font-size: 14px;
-	line-height: 19px;
-}
-
-/* for inline code */
-:not(pre):not(.hljs) > code {
-	color: #C9AE75; /* Change the old color so it seems less like an error */
-	font-size: inherit;
-}
-
-/* Page Break : use <div class="page"/> to insert page break
--------------------------------------------------------- */
-.page {
-	page-break-after: always;
-}
-
-</style>
-
-<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
-  <script>
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
-          ? 'dark'
-          : 'default'
-    });
-  </script>
-<p>United States</p>
-<p>ARIZONA
-Lake Havasu City
-Havasu Dunes Resort
-Havasu Sands Resort
-Sapphire Resorts @ Havasu Dunes
-Phoenix Area
-Hampton Inn &amp; Suites Scottsdale Riverwalk - 3 Nights
-Hilton Phoenix Resort at the Peak - 3 Nights
-Residence Inn by Marriott Prescott - 3 Nights
-Scottsdale Links Resort
-Shell Vacations Club @ The Legacy Golf Resort
-SpringHill Suites by Marriott Prescott - 3 Nights
-Wigwam Arizona - 3 Nights
-WorldMark Scottsdale - 3 Nights
-WorldMark Scottsdale - 5 Nights
-Sedona Area
-Arroyo Pinion Hotel - 3 Nights
-Sedona Summit
-Tucson Area
-Hilton Tucson East - 3 Nights
-ARKANSAS
-Arkansas
-Club Wyndham Resort at Fairfield Bay
-Crown Point Resort
-Emerald Isle Condominiums
-Los Indios Escapes Cherokee Village
-South Shore Lake Resort
-The Wharf
-CALIFORNIA
-Bakersfield
-Stallion Springs Resort
-Lake Tahoe Area
-Americana Village
-Forest Suites Resort at Heavenly Village - 3 Nights
-Olympic Village Inn
-Red Wolf Squaw Valley
-Tahoe Beach &amp; Ski Club
-Los Angeles Area
-Holiday Inn and Suites Santa Maria - 3 Nights
-Orange County
-Casablanca Inn - 3 Nights
-Palm Springs Area
-Palm Canyon Resort
-Staybridge Suites Cathedral City - Palm Springs - 3 Nights
-San Bernardino Area
-Sapphire Resorts @ Snow Lake Lodge
-San Diego Area
-Best Western Plus Island Palms Hotel &amp; Marina - 3 Nights
-Humphrey's Half Moon Inn &amp; Suites - 3 Nights
-The Dana on Mission Bay - 3 Nights
-San Francisco Area
-The Sandman Hotel - 3 Nights
-COLORADO
-Colorado - South
-Wyndham Pagosa
-Steamboat Springs
-Legacy Vacation Club Steamboat Springs - Hilltop
-Legacy Vacation Resort Steamboat Suites
-Vail And Breckenridge Area
-The Christie Lodge
-Winter Park
-The Mountainside at SilverCreek
-DISTRICT OF COLUMBIA
-District Of Columbia
-The Embassy Row Hotel - 3 Nights
-FLORIDA
-Daytona Beach Area
-Bahama House - 3 Nights
-Grand Lakefront Resort Club USA / Holly Bluff Marina
-Hyatt Place Daytona Beach - Oceanfront - 3 Nights
-Vacation Villas
-Florida Keys
-Skipjack Resort Suites and Marina - 3 Nights
-Fort Lauderdale Area
-Beachwalk Resort - 3 Nights
-Ocean Manor Resort - 3 Nights
-Ft Walton / Destin
-Marina Bay Resort
-Lake Okeechobee Area
-Harder Hall Lakeside Villas
-Miami Area
-Doubletree by Hilton Deerfield Beach-Boca Raton - 3 Nights
-Newport Beachside Hotel &amp; Resort - 3 Nights
-Park Royal Miami Beach - 3 Nights
-Park Royal Miami Beach - 4 Nights
-Naples - Fort Myers Area
-Bayfront Inn on Fifth - 3 Nights
-Lehigh Resort Club
-Staybridge Suites Naples - Gulf Coast - 3 Nights
-Staybridge Suites Naples Marco Island - 3 Nights
-Westin Cape Coral Resorts at Marina Village - 3 Nights
-Orlando - Kissimmee Area
-Alhambra Villas at Poinciana
-Alhambra at Poinciana
-Barefoot'n in the Keys at Old Town
-Blue Tree Resort at Lake Buena Vista
-Bryan's Spanish Cove
-Calypso Cay
-Club Sevilla
-Club Wyndham Cypress Palms
-Club Wyndham Star Island
-Cypress Pointe Grande Villas Resort
-Cypress Pointe Resort
-Doubletree by Hilton Orlando at SeaWorld - 3 Nights
-Driftwood Worldgate Resort
-Festiva Orlando Resort
-Florida Vacation Villas
-GEVC at Club Sevilla
-Grande Villas
-High Point World Resort
-Legacy Vacation Club Lake Buena Vista
-Legacy Vacation Club Orlando - Oaks
-Legacy Vacation Club Orlando-Resort World
-Legacy Vacation Club Orlando-Spas
-Orbit One Vacation Villas
-Park Royal Homestay Orlando
-Red Lion Hotel Orlando Lake Buena Vista South - 3 Nights
-Rhc/High Point World Resort
-Silver Lake Resort
-Silver Lake Resort-Silver Points
-Summer Bay Orlando By Exploria Resorts
-The Barefoot Suites By Ascend Collection
-Tampa - St Petersburg Area
-Aloft Midtown Tampa - 3 Nights
-Harborside Suites - 3 Nights
-Residence Inn Oldsmar Tampa - 3 Nights
-Residence Inn by Marriott Tampa Suncoast Parkway - 3 Nights
-Safety Harbor Resort and Spa - 3 Nights
-The Barrymore Hotel - 3 Nights
-Vero Beach - Melbourne Area
-Pirate's Cove Resort &amp; Marina - 3 Nights
-GEORGIA
-Georgia
-Brassie Knob Villas at Sky Valley
-Holiday Inn Club Vacations Apple Mountain Resort
-Time Shares of Sky Valley
-IDAHO
-Idaho
-Hot Springs Village
-The Timbers Condominiums At Island Park Village
-Idaho - North
-Stoneridge Resort
-ILLINOIS
-Illinois
-Holiday Inn Club Vacations Fox River Resort
-IOWA
-Iowa
-Sunrise Cove at Village West
-West Oaks
-LOUISIANA
-Louisiana
-Holiday Inn Express St. Charles Ave
-Hyatt House New Orleans -3 Nights
-Hyatt Regency New Orleans - 3 Nights
-The Troubadour Hotel, a Tapestry Collection by Hilton - 3 Nights
-MAINE
-Maine - Coastal
-Sea Mist Resort of Maine
-Trade Winds on the Bay
-Maine - Inland
-Bethel Inn
-Grand Summit Resort Hotel at Sunday River
-River View Resort
-The Jordan Grand Hotel At Sunday River
-MARYLAND
-Maryland
-Crowne Plaza Baltimore - Inner Harbor - 3 Nights
-Staybridge Suites Baltimore Inner Harbor - 3 Nights
-MASSACHUSETTS
-Massachusetts - Coastal
-Cape Cod Holiday Estates
-Courtyard Resort
-Pier 7 Condominiums
-Sandcastle Resort
-Sea Mist Resort
-Sea Winds Ii
-The Cove at Yarmouth
-The Edgewater Beach Resort
-The Harwich Port
-Massachusetts - Inland
-Holiday Inn Club Vacations Oak 'n Spruce Resort
-Wind in the Pines
-Wind in the Pines II
-MICHIGAN
-Michigan
-Pinestead Reef-Vip
-Shanty Creek Lodges
-The Inn at St Ives
-Vacation Club
-MINNESOTA
-Minnesota
-Breezy Center at Breezy Point Resort
-Breezy Point Timeshare
-Breezy Shores Resort &amp; Beach Club
-Causeway on Gull
-Eagle's Nest at Breezy Point
-Lake Carlos Villas
-North Beach
-Quadna Mountain Resort
-The Village at Izatys Resort
-MISSISSIPPI
-Mississippi
-The Villas of Hickory Hill
-MISSOURI
-Branson Area
-Club Wyndham Branson at the Falls
-Holiday Inn Club Vacations Holiday Hills
-Holiday Inn Club Vacations Ozark Mountain Resort
-MROP at Eagle's Nest
-Oak Ridge at Branson
-Stonebridge Village Condominiums
-Surrey Vacation Resort
-The Park @ Foxborough
-The Retreat of Foxborough by LGI
-The Shores Of Trl At Kimberling Inn
-The Suites at Fall Creek
-Westgate Branson Woods
-Lake Of The Ozark
-Lakeview Resort
-Nantucket Bay Condominiums
-Port Elsewhere
-Treetop Condominiums
-Vintage Landing Condominiums
-MONTANA
-Montana
-Meadow Lake Golf Resort
-Nenastako Village at Meadow Lake
-The Edelweiss
-NEVADA
-Las Vegas Area
-Cancun Resort Las Vegas
-Club De Soleil
-Club Wyndham Desert Blue
-Club Wyndham Desert Blue - 3 Nights
-Club Wyndham Grand Desert
-Club Wyndham Tropicana
-Grand Destination Vacation Club At The Oasis Resort
-OYO Hotel &amp; Casino Las Vegas - 3 Nights
-OYO Hotel &amp; Casino Las Vegas - 5 Nights
-Shell Vacations Club @ Desert Rose Resort
-Tahiti Vacation Club
-Tahiti Village
-The Carriage House
-Reno Area
-Legacy Vacation Club Reno
-NEW HAMPSHIRE
-New Hampshire - Inland
-Cold Spring Resort
-InnSeason Resorts Pollard Brook
-Mittersill Alpine Resort
-The Mountain View Resort
-New Hampshire - Lakes Region
-Steele Hill Resorts-East
-Steele Hill Resorts-South
-Summit Resort
-The Center Harbor Inn
-The Windrifter
-Village of Winnipesaukee
-NEW JERSEY
-Atlantic City
-Esplanade Suites, a Sundance Vacations Property - 3 Nights
-FantaSea Resorts - Flagship Resort
-FantaSea Resorts at Atlantic Palace
-Fantasea Resorts La Sammana
-Legacy Vacation Club Brigantine Beach
-Rhc/Brigantine Beach Club
-NEW MEXICO
-New Mexico
-Champions' Run Condominiums
-High Sierra
-Pinecliff Village
-NEW YORK
-Catskills And Adirondacks
-Kaatskill Mountain Club
-New York City
-DoubleTree by Hilton New York Times Square West - 3 Nights
-Holiday Inn Manhattan Financial District - 3 Nights
-NORTH CAROLINA
-North Carolina - Coastal
-A Place at the Beach III
-Beachwoods
-Peppertree Atlantic Beach III
-Ramada Plaza Nags Head Oceanfront
-Ramada Plaza Nags Head Oceanfront - 3 Nights
-Ramada Plaza Nags Head Oceanfront - 5 Nights
-North Carolina - Inland
-Fairway Forest at Sapphire Valley
-Smoketree Lodge
-OREGON
-Oregon - Inland
-Club Wyndham Portland Waterfront Park
-Whispering Woods II
-PENNSYLVANIA
-Pennsylvania - Western
-Wolf Run Manor at Treasure Lake
-Poconos
-CARRIAGE HOUSE COUNTRY CLUB
-Eagle Village Resort
-Endless Mountain Resort
-Ridge Top - Shawnee
-River Village I - Shawnee
-River Village II - Shawnee
-Tree Tops at Pocono Mountain Villas by Exploria Resorts
-Woodfield Manor, a Sundance Vacations Property - 3 Nights
-WorldMark Ridge Top - Shawnee
-WorldMark River Village I - Shawnee
-SOUTH CAROLINA
-Charleston Area
-Cambria Charleston Riverview Hotel - 3 Nights
-Hilton Head Islands
-Holiday Inn Express Hilton Head Island - 3 Nights
-Myrtle Beach
-Grand Palms Resort
-Grand Palms Resort Villas
-Marina Inn at Grande Dunes - 3 Nights
-Myrtle Beach Resort by Sundance Property- 3 Nights
-North Shore Oceanfront Hotel - 3 Nights
-Ocean Villas Beach Resort
-Presidential Villas at Grand Palms Resort
-Sand Dunes Resort &amp; Suites - 3 Nights
-Sand Dunes Resort &amp; Suites - 5 Nights
-The Yachtsman
-South Carolina - Inland
-Lake Marion Resort and Marina
-SOUTH DAKOTA
-South Dakota
-Barefoot Condominiums
-TENNESSEE
-Gatlinburg / Pigeon Forge
-Laurel Point Resort
-Laurel Springs Resort
-Mountain Meadows By Exploria Resorts
-Pinecrest Townhomes
-Ski View Mountain Resort
-Town Village @ Gatlinburg By Exploria Resorts
-Knoxville Area
-Club Wyndham Resort at Fairfield Glade
-Hiawatha Resort East at Lake Tansi
-Hiawatha Resort West at Lake Tansi
-Nashville Area
-Clarion Nashville Downtown-Stadium - 3 Nights
-Holiday Inn Vanderbilt - 3 Nights
-Margaritaville Vacation Club By Wyndham - Nashville
-TEXAS
-Dallas Area
-Holiday Inn Club Vacations Villages Resort
-The Lodge
-Houston Area
-Club Quarters Hotel Houston - 3 Nights
-Lake Conroe Area
-Holiday Inn Club Vacations Piney Shores Resort
-Inverness at Del Lago
-Villas on the Lake
-San Antonio Area
-Holiday Inn Riverwalk San Antonio - 3 Nights
-South Padre Island
-Fort Brown Condo Shares
-UTAH
-Brian Head Ski Area
-Cedar Breaks Lodge
-Copper Chase Condominiums
-Park City Area
-Park Hotel Condominiums
-Park Plaza
-Sapphire Resorts @ Park Regency
-Skiers Lodge
-Salt Lake City Area
-Iron Blosam Lodge @ Snowbird Ski &amp; Summer Resort
-Utah - North
-Bear Lake Timeshare
-Powder Ridge Village
-The Resort at Bear Lake
-Wolf Creek Village
-Wolf Creek Village II
-VERMONT
-Vermont
-Cedarbrook
-Crafts Inn
-Grand Summit Resort Hotel-Mt. Snow
-Jackson Gore Inn
-Killington Chalet Snowflake/Flur
-Killington Chalet Snowking/Snowqueen
-North Star Vacation Club
-Smugglers' Notch Resort
-The Village Green at Stowe
-VIRGIN ISLANDS
-Virgin Islands
-Wyndham St. Thomas - 5 Nights
-VIRGINIA
-Mcgaheysville Area
-The Summit at Massanutten
-Woodstone at Massanutten
-Shenandoah Valley
-Senedo Springs
-Skyline Ranch Resort
-Stony Court at Bryce Mountain
-The Pines
-Virginia Beach Area
-Ocean Beach Club
-Williamsburg
-Club Wyndham Kingsgate
-Club Wyndham Patriots' Place
-Greensprings Vacation Resort
-The Historic Powhatan Resort
-WASHINGTON
-Washington
-Lake Chelan Shores
-Surfcrest Condominiums
-WEST VIRGINIA
-West Virginia
-Lakeview Golf Resort and Spa
-WISCONSIN
-Green Bay Area
-Fox Hills Condos
-Waterbury Inn
-Milwaukee Area
-Olympia Vacation Owners
-The Dells Area
-Club Wyndham Glacier Canyon - 3 Nights
-Mirror Lake Resort
-Peppertree at Tamarack
-Staybridge Suites Wisconsin Dells - Lake Delton - 3 Nights
-Wisconsin - North
-Telemark</p>
-<p>Worldwide locations
-AFRICA
-Egypt
-Coral Hills Resort
-Domina Coral Bay Resort &amp; Casino
-El Morgan Touristic Village
-Isis Island Aswan
-Le Pacha Resort
-Lillyland Beach Club
-Logaina Resort
-Mazar Resort &amp; Spa
-Mirette Touristic Village
-Moon Beach Club
-Naama Bay Resort
-Regina Beach
-Royal Beach Resort
-Royal Paradise Resort
-Santa Monica
-Sharks Bay Oasis Resort &amp; Residence
-Sharm Bride Hotel And Residence
-Sharm Dreams Vacation Club
-Sharm In Amarein Hotel
-Shores Amphoras Resort
-Sindbad Aqua Hotel &amp; SPA
-Viking Club
-Zahabia Resort
-Kenya
-Mwembe Resort
-Morocco
-Marrakech Palm Club
-Residence Amina
-Senegal
-Neptune Beach Club
-South Africa
-Castleburn
-Glenmore Sands And Cabanas
-Port Owen Marina
-Sudwala Lodge
-Tunisia
-Arabesque
-Residence Djerba Paradise
-ASIA
-Cambodia
-Hotel Somadevi Angkor Boutique &amp; Resort - 4 Nights
-Hotel Somadevi Angkor Boutique &amp; Resort-3 Nights
-China
-Atour Hotel Pudong Zhangjiang Park - 3 Nights
-Best Western Plus Qingxinyuan Hotel Zhangjiajie - 3 Nights
-Best Western Plus Qingxinyuan Hotel Zhangjiajie - 4 Nights
-Blg-Beijing Longtou Apartment
-Boao Island Forest Hotel
-Fvc @Lijiang Huasheng Hotel
-HIVC @ Chongqing Huanmei Vacation Apartment
-Hainan Wanning Jinlvju Apartment
-Libre Resort Huangshan
-Qinhuangdao Jinjiang Peninsula Season Apartment Hotel
-SRC @ Platinum Vacation Residences Lijiang
-Shangshanqi - 3 Nights
-Shangshanqi - 4 Nights
-Taoyuan Hotspring International Hotel
-Vienna Hotel Chengdu
-Weihai Dawu Sea Feeling Hotel
-Wuyi Hot Spring Resort
-Wyndham Grand Qingdao - 3 Nights
-Wyndham Grand Qingdao-4 Nights
-Wyndham Grand Xian South - 3 Nights
-Wyndham Sanya Bay
-Xiqiang Homeland Hotel
-Xishuangbanna Mengsu Apartment Hotel - 3 Nights
-Xishuangbanna Mengsu Apartment Hotel - 4 Nights
-Hong Kong
-Metropark Hotel Kowloon - 3 Nights
-Metropark Hotel Kowloon-4 Nights
-India
-Avalon Mussoorie
-Clifftop Club
-Clifftop Club - 3 Nights
-Clifftop Club - 4 Nights
-Country Inn, Bhimtal
-Daiwik Hotels Rameswaram
-Danta Resort
-Fort Chanwa Luni
-Hill Country Resorts-Kodaikanal
-Hotel Mayur
-Hotel Royal Ladakh
-Hotel Royal Ladakh - 3 Nights
-Hotel Royal Ladakh - 4 Nights
-Hotel Shevaroys
-JC Residency, Madurai
-Leonia Holistic Destination
-Lions Den Resort
-Lotus Suites, Goa
-Mantra Resort
-Mint Bundela Resort
-Mint Tarika Resort
-Mountain Club
-Neonz Lifestyle &amp; Recreation Club
-Nest 'n Mist
-Nidhivan Sarovar Portico
-Palm Greens Club
-Palmarinha Resort &amp; Suites
-Phoenix Resort
-Rainforest Resort
-Rainforest Resort - 3 Nights
-Rainforest Resort - 4 Nights
-Ramada Gurgaon Central
-Rangers Club Game Lodge
-Ras Resorts Silvassa
-Sanskruti Suites &amp; Resort
-Sanskruti Suites &amp; Resort - 4 Nights
-Shimla Havens Resort
-Sterling Dharamshala
-Sterling Anaikatti
-Sterling Corbett
-Sterling Corbett - 4 Nights
-Sterling Darjeeling
-Sterling Darjeeling - 3 Nights
-Sterling Darjeeling-4 Nights
-Sterling Goa - Varca
-Sterling Goa - Varca - 3 Nights
-Sterling Goa - Varca-4 Nights
-Sterling Kanha
-Sterling Kanha - 3 Nights
-Sterling Kanha - 4 Nights
-Sterling Karwar
-Sterling Karwar - 3 Nights
-Sterling Karwar-4 Nights
-Sterling Kodai - Lake
-Sterling Kodai - Lake - 3 Nights
-Sterling Kodai - Lake -4 Nights
-Sterling Kodai - Valley
-Sterling Kodai - Valley - 3 Nights
-Sterling Kodai - Valley - 4 Nights
-Sterling Kufri
-Sterling Lonavala
-Sterling Lonavala-4 Nights
-Sterling Manali
-Sterling Manali - 3 Nights
-Sterling Mount Abu
-Sterling Mount Abu - 3 Nights
-Sterling Mount Abu - 4 Nights
-Sterling Munnar
-Sterling Mussoorie
-Sterling Mussoorie - 3 Nights
-Sterling Mussoorie-4 Nights
-Sterling Nainital
-Sterling Nainital - 3 Nights
-Sterling Ooty - Elk Hill
-Sterling Ooty - Elk Hill - 3 Nights
-Sterling Ooty - Fern Hill
-Sterling Ooty - Fern Hill - 3 Nights
-Sterling Puri - 3 Nights
-Sterling Wayanad
-Sterling Wayanad - 3 Nights
-Sterling Wayanad - 4 Nights
-Sterling Yelagiri
-Sterling Yercaud
-Sterling Yercaud-4 Nights
-Summer Plaza Resort
-Summer Sands Beach Resort
-Summer Sands Beach Resort - 3 Nights
-Summer Sands Beach Resort - 4 Nights
-Symphony Palms Beach Resort - 3 Nights
-Symphony Palms Beach Resort - 4 Nights
-Symphony Samudra
-Symphony Samudra - 3 Nights
-Symphony Samudra - 4 Nights
-Tathastu Resorts
-The Ffort Holiday Klub
-The Golden Tusk
-The Lagoona Resort
-The Pride Sun Village Resort &amp; Spa-Goa
-The Resort Country Club
-The Resort Country Club-3 Nights
-The Resort Country Club-4 Nights
-The Tall Trees, Munnar
-The Waterfront Shaw
-Timber Trail Heights
-Times Club Dwarka
-Times Flute Boutique Hotel
-Times Rajmahal
-Treasure Island
-Treat Beach Resort &amp; Spa
-Treat Resort Silvassa
-VITS Mumbai
-Valencia Club Abu
-Vijayshree Heritage Village
-Indonesia
-Bali Masari Villas &amp; Spa - 3 Nights
-Bali Masari Villas &amp; Spa-4 Nights
-Bali Seascape Beach Club
-Karma Mayura - 3 Nights
-Karma Mayura - 4 Nights
-Mayura A Karma Retreat
-Medewi Bay Retreat
-Rama Holidays@ Residence Petitenget
-Rama Residence Padma - 3 Nights
-Rama Residence Padma-4 Nights
-Ramayana Candidasa
-Ramayana Candidasa Rental - 3 Nights
-Ramayana Candidasa Rental - 4 Nights
-Risata Bali Resort &amp; Spa
-Royal Candidasa
-Royal Jimbaran
-Royal Sanur
-The Swaha Hotel
-The Swaha Hotel - 3 Nights
-The Swaha Hotel - 4 Nights
-Wadari Ubud Retreat - 3 Nights
-Wadari Ubud Retreat - 4 Nights
-Japan
-Hotel Ambient Izukogen Annex-4 Nights
-Hotel Elsereine Osaka - 3 Nights
-Sapporo Excel Hotel Tokyu - 3 Nights
-Malaysia
-Avani Sepang Goldcoast Resort - 4 Nights
-Awana Genting Highlands Golf And Country Resort
-Bukit Gambang Resort City
-Citin Seacare Hotel Pudu by Compass Hospitality
-Citin Seacare Hotel Pudu by Compass Hospitality - 3 Nights
-Citin Seacare Hotel Pudu by Compass Hospitality - 4 Nights
-Citrus Hotel Johor Bahru by Compass Hospitality
-Citrus Hotel Johor Bahru by Compass Hospitality - 3 Nights
-Citrus Hotel Johor Bahru by Compass Hospitality - 4 Nights
-Damai Beach Resort
-Greenhill Resort
-KL Plaza Suites
-Leisure Cove
-Perdana Beach Resort
-Ramada Suites By Wyndham KLCC - 3 Nights
-Ramada Suites By Wyndham KLCC - 4 Nights
-Philippines
-Astoria Palawan
-Astoria Palawan - 3 Nights
-Astoria Palawan - 4 Nights
-Caliraya Resort Club
-Microtel By Wyndham Davao - 3 Nights
-Microtel By Wyndham Davao-4 Nights
-Microtel By Wyndham-Boracay-3 Nights
-Microtel By Wyndham-Boracay-4 Nights
-Microtel by Wyndham Puerto Princesa - 3 Nights
-Microtel by Wyndham Puerto Princesa - 4 Nights
-Oceana Bay Resort Vacation and Leisure Club
-Singapore
-Days Hotel by Wyndham Singapore At Zhongshan Park - 3 Nights
-South Korea
-Hotel Anytime - Seoul - 3 Nights
-Hotel Anytime - Seoul - 4 Nights
-Hotel Cocomo Seoul - 3 Nights
-Hotel Cocomo Seoul - 4 Nights
-Sri Lanka
-Arie Lagoon
-Arie Lagoon - 3 Nights
-Tisara Villas
-Tisara Villas - 3 Nights
-Taiwan
-Kentington Resort
-Thailand
-Aspen Suites Hotel Sukhumvit 2 - 3 Nights
-Aspen Suites Hotel Sukhumvit 2 - 4 Nights
-Chateau Dale Beach Resort
-Citrus Suites Sukhumvit 6 by Compass Hospitality - 3 Nights
-Citrus Suites Sukhumvit 6 by Compass Hospitality - 4 Nights
-Grand Tower Inn
-Hotel Royal Crown
-Interlux Club Royal
-Karma Royal Boat Lagoon - 3 Nights
-Karma Royal Boat Lagoon - 4 Nights
-LHC @ Allamanda Laguna Phuket - 3 Nights
-LHC @ Allamanda Laguna Phuket - 4 Nights
-Laguna Holiday Club Phuket Resort - 3 Nights
-Laguna Holiday Club Phuket Resort-4 Nights
-MTC Plus at Grand Tower Inn
-Saboey Resort And Villas - 4 Nights
-Saboey Resort and Villas - 3 Nights
-Saboey Resort and Villas - 7 Nights
-The Royal Bay View Villas - 3 Nights
-The Royal Bay View Villas - 4 Nights
-Vietnam
-FLC Grand Hotel Ha Long - 3 Nights
-FLC Grand Hotel Samson - 3 Nights
-FLC Grand Hotel Samson - 4 Nights
-FLC Luxury Vinh Phuc Resort - 3 Nights
-FLC Luxury Vinh Phuc Resort - 4 Nights
-FLC Quy Nhon Beach &amp; Golf Resort - 4 Nights
-FLC Samson Beach &amp; Golf Resort - 4 Nights
-Hotel Equatorial Ho Chi Minh City - 3 Nights
-Hotel Equatorial Ho Chi Minh City - 4 Nights
-Kosmos Apart Hotel - 4 Nights
-Kosmos Apart Hotel - 3 Nights
-Park Regis
-Salinda Resort Phu Quoc Island - 3 Nights
-Salinda Resort Phu Quoc Island - 4 Nights
-Wyndham Legend Halong - 3 Nights
-AUSTRALIA / SOUTH PACIFIC
-Australia
-Altitude Motel Apartments - 3 Nights
-Murray Valley Resort
-Nepean Country Club &amp; Day Spa
-Oaks Broome - 3 Nights
-Oaks Calypso Plaza - 3 Nights
-Oaks Istay River City - 3 Nights
-Oaks Istay River City - 4 Nights Rental
-Oaks Metropole Hotel - 3 Nights
-Oaks Metropole Hotel - 4 Nights
-Oaks Oasis Resort - 3 Nights
-Oaks On Collins - 3 Nights
-Oaks Pacific Blue Resort - 3 Nights
-Oaks Pacific Blue Resort - 4 Nights
-Oaks Seaforth - 3 Nights
-Silkari Lagoons Port Douglas - 4 Nights
-Silkari Lagoons Port Douglas - 5 Nights
-The Moorings
-New Zealand
-Oaks Wellington Hotel - 3 Nights
-Tahiti And Cook Islands
-TradeWinds French Polynesia
-CANADA
-British Columbia
-Destinations at Holiday Park
-Lake Okanagan Resort
-Panorama Vacation Retreat At Horsethief Lodge
-Sunchaser Vacation Villas At Riverside
-Ontario
-Georgian Bay Hotel &amp; Conference Centre
-Hilton Garden Inn Niagara-on-the-Lake - 3 Nights
-Quebec
-Club Vacances MSA
-Club Vacances le Plateau
-Condo Hotel le Lion D'Or
-Condo-Québec Au Scandinave
-Privilege Mont-Tremblant–Voliere
-CARIBBEAN
-Aruba
-Barcelo Aruba
-Bahamas
-Island Seas Resort
-Mayfield Beach Resort
-Ocean Reef Yacht Club and Resort
-Seabreeze Vacation Villas &amp; Marina
-The Marlin at Taino Beach
-The Ocean at Taino Beach
-Viva Vacation Club At Viva Wyndham Fortuna Beach
-Westwind Club
-Westwind II Club
-Barbados
-South Beach Hotel
-Cayman Islands
-Morritt's Grand Resort
-Morritt's Tortuga Club
-Dominican Republic
-Acuarium Suite Resort
-Bppc @ Luxury Bahia Principe Bouganville
-Casa Marina Reef by VRC
-Circle at Paradisus Palma Real
-Club Melia At Paradisus Palma Real
-Club Meliá at Meliá Caribe Beach I
-Club Meliá at Meliá Caribe Beach II
-Dominican Fiesta Hotel &amp; Casino - 3 Nights
-Dominican Fiesta Hotel &amp; Casino - 4 Nights
-Emotions by Hodelpa Juan Dolio
-Emotions by Hodelpa Playa Dorada
-Fantasia Bahia Principe Punta Cana
-Forest Beach Club by Hodelpa
-Grand Bahia Principe Aquamarine
-Grand Bahia Principe El Portillo
-Grand Bahia Principe La Romana
-Grand Bahia Principe Punta Cana
-Grand Palladium Punta Cana Resort &amp; Spa
-Grand Paradise Playa Dorada
-IBEROSTAR Bavaro
-IBEROSTAR Dominica
-IBEROSTAR Hacienda Dominicus
-Luxury Bahia Principe Ambar
-Luxury Bahia Principe Cayo Levantado
-Luxury Bahia Principe Esmeralda
-MVC at Meliá Caribe Beach
-Nickelodeon Resort Punta Cana By Karisma
-Occidental Punta Cana
-Ocean Blue &amp; Sand
-Presidential Suites By Lifestyle Puerto Plata
-Presidential Suites by Lifestyle - Cabarete
-Riviera Azul
-Senator Puerto Plata Spa Resort
-The Crown Suites at LHVC Resort
-The Crown Villas at LHVC Resort
-The Residence Suites at LHVC Resort
-The Tropical @ LHVC
-The Tropical at LHVC Resort
-TravelSmart at Royalton CHIC Punta Cana
-TravelSmart at Royalton Punta Cana
-TravelSmart at Royalton Splash Punta Cana
-Travelsmart at Royalton Bavaro
-Viva Vacation Club At Viva Wyndham Dominicus Beach
-Viva Vacation Club At Viva Wyndham Dominicus Palace
-Guadeloupe
-Green Blue Houses
-Jamaica
-BPPC @ Luxury Bahia Principe Runaway Bay
-Club Caribbean
-Grand Bahia Principe Jamaica
-Grand Palladium Jamaica Resort &amp; Spa
-Grand Palladium Lady Hamilton Resort &amp; Spa
-IBEROSTAR Grand Hotel Rose Hall
-IBEROSTAR Rose Hall Beach
-IBEROSTAR Rose Hall Suites
-Ocean Coral Spring
-TravelSmart at Royalton Blue Waters
-TravelSmart at Royalton Negril
-TravelSmart at Royalton White Sands
-Martinique
-Diamant Beach Club
-Puerto Rico
-AC Hotel San Juan Condado - 3 Nights
-Wyndham Rio Mar
-Saint Kitts And Nevis
-Sugar Bay Club Suites &amp; Hotel - 3 Nights
-Saint Lucia
-Oasis Marigot
-TravelSmart at Royalton St. Lucia
-Saint Martin
-TradeWinds St. Martin
-St Maarten
-Sapphire Beach Club
-Tortola
-TradeWinds British Virgin Islands
-CENTRAL / SOUTH AMERICA
-Angra Dos Reis
-Samba Angra dos Reis
-Argentina
-Apart del Lago
-Apartur Buenos Aires
-Apartur Mar del Plata
-Bahia Manzano
-Bahia Montana
-Design Suites and Towers
-Exclusive
-Hostal del Sol II
-Hotel y Resort Valle Grande
-Howard Johnson la Canada &amp; Suites - 3 Nights
-Las Lomas del Correntoso
-Marges Tiempo Compartido
-Park Royal City Buenos Aires - 3 Nights
-Park Royal City Buenos Aires - 4 Nights
-Playa Palace
-Primacy Apart Hotel
-RCT Club Vacacional
-Rupu Pehuén
-Vacances Centro
-Vacances Dorado
-Vacances Golf
-Villa Pirén Cabalango
-Belo Horizonte
-Hotel Fazenda Pocos de Caldas
-Hotel Golden Park Pocos de Caldas
-Thermas Resort Walter World Pocos de Caldas
-Vilage Inn Pocos de Caldas
-Brazil Interior
-Escarpas Do Lago Hotel
-Chile
-Olmue Club Apart - 2 Nights
-Olmue Club Apart Hotel - 3 Nights
-Pucón II
-Colombia
-City Express Plus Cali
-City Express Plus Cali - 3 Nights
-City Express Plus Cali - 4 Nights
-Decámeron Beach Resort Spa Baru
-Guadaira Resort
-Hotel Blue Cove
-Hotel Decámeron Cartagena
-Hotel Decámeron Galeón
-Hotel Decámeron San Luis
-Hotel Muisca - 3 Nights
-Hotel Musica
-Hotel On Vacation Amazon
-Hotel Superdecámeron Marazul
-Las Aldeas Hoteles Resort
-Terrazas Tayrona
-Waya Guajira
-Wyndham Garden Villavicencio Hotel &amp; Centro de Convenciones
-Wyndham Garden Villavicencio Hotel &amp; Centro de Convenciones - 2 Nights
-Wyndham Garden Villavicencio Hotel &amp; Centro de Convenciones - 3 Nights
-Costa Rica
-Blue River Resort &amp; Hot Springs - 3 Nights
-Condovac La Costa LG - 3 Nights
-Hotel del Sur
-Occidental Papagayo <em>Adults Only</em>
-Taranova-Villas Palmas
-Villas Sol Hotel &amp; Beach Resort
-Ecuador
-Hillary Nature Resort
-Wyndham Manta Sail Plaza Hotel &amp; Convention Center
-Florianopolis
-Castelmar Hotel
-Costa Sul Beach Hotel
-Costao do Santinho Resort Golf &amp; Spa
-Ingleses Holiday Resort
-Praia Brava Hotel
-Residencial Itapema Vacation Club
-Fortaleza
-Acqua Beach Park Resort
-Brasil Tropical Residence
-Iracema Residence Service
-Oceani Beach Park Resort
-Plaza Praia Suites
-Suites Beach Park Resort
-Wellness Beach Park Resort
-Foz Do Iguazu
-Mabu Thermas &amp; Resort
-My Mabu
-Wish Resort Golf Convention Foz do Iguacu
-Wynhdam Golden Foz Suites
-Goias
-Bougainville Parque Hotel
-Caldas Termas Clube Hotel
-Hotel Giardino
-Hotel Turismo Rio Quente Resorts
-Jardins Da Lagoa Condo Resort
-Lagoa Quente Flat Hotel
-Resort Do Lago
-Río Quente Vacation Villa
-Serra Madre Residence
-Thermas diRoma Hotel
-diRoma Exclusive
-Gramado
-Gramado Exclusive Resort
-Hotel Casa da Montanha
-Residencial Pousada do Serrano
-Wish Serrano Resort &amp; Convention Gramado
-Wyndham Gramado Termas Resort &amp; Spa
-Guatemala
-Hotel Soleil La Antigua - 3 Nights
-Hotel Soleil Pacifico - 4 Nights
-Maceio
-Maceió Mar Hotel
-Maranhao
-Carnaubinha Praia Resort
-Natal
-AcquaPipa Resort
-Bello Mare Conforto
-Pipa Lagoa Hotel
-Praia Bonita Resort &amp; Conventions
-Wish Natal by GJP
-Panama
-Playa Blanca Beach Resort y Spa
-Playa Blanca Town Center
-Parana
-Mabu Curitiba Business
-Recife
-Hotel Marinas Tamandaré
-Rio De Janeiro City
-Flamboyant Hotel &amp; Convention
-Ramada Encore Ribalta Rio Janeiro
-Samba Cabo Frio
-Rio De Janeiro
-Royal Holiday- Rio Othon Palace - 3 Nights
-Rio De Janeiro Interior
-Aldeia das Aguas - Quartier
-Complexo Hoteleiro Le Canton
-Salinopolis
-Salinas Park Resort
-Salvador
-Gran Hotel Stella Maris Resort &amp; Conventions
-Wish Hotel da Bahía by GJP
-Wish Hotel da Bahía by GJP
-Sao Paulo
-Barretos Country Thermas Suites
-Bella Gramado
-Campo Belo Exclusive
-Campo Belo Exclusive
-Carpe Diem Boutique &amp; Spa
-Condominio Amarilis Flat Service
-Nautico Clube Fronteira
-Novotel Itu Golf &amp; Resort
-Pestana Sao Paulo
-Pousada Larimor - 3 Nights
-Wyndham Olimpia Royal Hotels
-Zagaia Eco Resort Hotel
-Uruguay
-Green Park Private Club - 3 Nights
-Solanas Forest Resort
-Solanas Royalmar
-Venezuela
-Casas Del Sol Hotel Suites &amp; Beach Resort
-Complejo Turistico Hotel Venetur Cumana
-Complejo Turístico Y Recreacional Villa Caribe
-Conjunto Turístico Vacacional Cordillera
-Coral Suites Hotel &amp; Resort
-Estancia La Vera Cruz
-Fiesta Inn Aguasal
-Gran Hotel Ccp Suites
-Guadalupe Resort
-Hippocampus Beach Resort
-Hippocampus Villas Resort
-Hotel Bahia Kangrejo &amp; Suites
-Hotel Hacienda El Portete
-Hotel La Sierra Santo Domingo
-Hotel Lake Plaza
-Hotel Tibisay
-Hotel Venetur Margarita
-Islas del Sol Morrocoy Resort
-La Posada del Reino
-La Trucha Azul
-Marbellamar Resort &amp; Beach Club
-Margabella Suites
-Margarita Dynasty
-Margarita Real Hotel Boutique &amp; Vacation Club
-Margarita Village International Resort
-Musipan Resort
-Nueva Toledo International Timesharing
-Playa Sirena Resort
-Páramo La Culata Resort
-Sierra Linda Hotel Club De Montana
-Villa Chalet San Cristóbal Hotel Resort
-EUROPE
-Andorra
-Ona Dorada El Tarter
-Austria
-Alpine Club by Diamond Resorts
-Clubhotel Cortina
-Ferienclub Bellevue - Mondi
-Ferienclub Grundlsee - Mondi
-Ferienclub Schloesslhof (Mondi)
-Golf - Und Ferienclub Amadeus
-Holiday Residence Warmbad
-Marco Polo Club Alpina
-St. Johann Alpenland Resort
-Bulgaria
-Balkan Jewel Resort &amp; Chalets
-Central France
-Domaine De Gavaudun
-Central Italy
-Borgo di Vagli
-Carpediem Assisi Living Club
-Dimore la Vecchia Firenze
-Hotel Porta Del Sole Halfboard
-Il Poggio
-La Casella
-Palazzo Catalani Resort
-Costa Del Sol
-Alanda Club Marbella
-Apartamentos Pueblo Quinta Dos
-CLC Benal Beach
-CLC Las Farolas Royale
-CLC Marina Park
-CLC Marina del Rey
-CLC Marina del Sol
-CLC Sierra Marina
-Club Bena Vista
-Club Oasis at El Capistrano
-Crown Resorts at Club Calahonda
-Crown Resorts at Club Marbella
-El Capistrano Playa
-El Capistrano Village
-Elite Apartments at Pueblo Evita
-Heritage Resorts Club Playa Real
-Heritage Resorts Marbesa Club
-Heritage Resorts at Matchroom
-Holiday Club Calahonda
-Las Mimosas Beach Club
-Los Amigos Beach Club by Diamond Resorts
-Macdonald Doña Lola 3NT
-Macdonald Doña Lola 4NT
-Macdonald Doña Lola Resort
-Macdonald Villacana Resort
-Miraflores Beach and Country Club
-Miraflores Rancho Club
-Miraflores Vacation Club
-Ona Campanario
-Pueblo Evita Club
-Royal Oasis Club @ Pueblo Quinta by Diamond Resorts
-Sahara Sunset by Diamond Resorts
-Sunset Beach Club
-Torrenueva Park
-Crete
-Creta Suites
-Karma Minoan
-Leoniki Residence
-Croatia
-Fontana Resort - Pinus Apartments
-Cyprus
-Club Aphrodite at Erimi Gardens
-Club Coral View Resort
-Club Pyla Beach Resort
-Paradise Kings Club Paphos
-Denmark
-Feriecentret Ra Geleje Klit
-Himmerland Golf &amp; Spa Resort
-Jeckels Gammel Skagen
-East Coast Spain
-Acuasol
-Albir Garden
-Alfaz Paradise Club
-Apartamentos Fenix Beach / Mar y Golf
-Apartamentos el Cano
-Bahía Azul
-Club Atlas Nou Espai 1
-Estival Park
-Habitat Calgary '88
-Habitat Playa Romana
-Jardines del Plaza
-La Casona de Vidiago
-Montemar Natura Resort
-Ona Aldea Del Mar
-Ona Club Novelty
-Ona Jardines Paraisol
-Ona Ogisaka Garden
-Parque Denia Club
-Peñíscola Plaza
-Port de Rei
-Sol Neu
-Somni De Cambrils
-Urbanizacion San Fernando
-Finland
-Holiday Club Airisto
-Holiday Club Ellivuori
-Holiday Club Hannunkivi
-Holiday Club Himos
-Holiday Club Kalajoki
-Holiday Club Katinkulta
-Holiday Club Kelorinne
-Holiday Club Kuortane Sports Resort
-Holiday Club Kuusamon Tropiikki
-Holiday Club Naantali Residence
-Holiday Club Punkaharju
-Holiday Club Pyha
-Holiday Club Pyha Holy Suites
-Holiday Club Pyhaniemi
-Holiday Club Ruka
-Holiday Club Ruka Village
-Holiday Club Rukaloma
-Holiday Club Saariselka
-Holiday Club Saimaa
-Holiday Club Salla
-Holiday Club Tampereen Kylpyla
-Holiday Club Yllas 1
-Holiday Club Yllas 2
-Holiday Club Yllas 3
-Holiday Club Yllas Saaga
-Levi-Rakkavaara Club 1
-Lomakyla Onnenvirta
-Lomalaukaa
-Tahkovuori
-Vuokatti Country Club
-Fuerteventura
-Dunas Club
-Elite Fuerteventura Club
-Playa Park Club
-Gran Canaria
-Anfi Beach Club
-Atlantic Beach Club
-Cala Blanca by Diamond Resorts
-Club Excélsior 2
-Club Gran Anfi
-Club Monte Anfi
-Club Primavera
-Club Puerto Anfi
-Club Vista Serena
-Holiday Club Jardín de Amadores
-Holiday Club Puerto Calma
-Holiday Club Sol Amadores
-Greece
-Brown Acropol - 3 Nights
-Brown Acropol - 4 Nights
-Dolce Attica Riviera
-Ramada Attica Riviera
-Hungary
-Abbázia Country Club
-Aparthotel Hévíz
-Aparthotel Kalma
-Apollo Thermal Apartments
-Club Abbázia
-Club Dobogómajor
-Holiday Club Hévíz
-Kalma Villa
-Petnehazy Club Hotel
-Solar Club Hotel
-Ibiza
-Aldea Bonsai
-Las Terrazas de Cala Codolar
-Ses Fontanellas Plaza
-Torrent Bay Club
-Italy
-Castello Izzalini
-Il Poggio Bed &amp; Breakfast
-Italy Coastal
-Hotel Villa Igea
-Ischia Uno Residence
-Portofino Est Residence
-Residence Baia Fenicia
-Residence I Boboli
-Residence I Delfini Di Pugnochiuso
-Residenza dei Cavalleggeri
-Torre Inserraglio-I Tramonti
-Villaggio l'Olivara
-Italy Lakes And Mountains
-Casa Canazei
-Casa Carezza
-Domina Borgo Degli Ulivi
-Golfhotel Costalunga
-Jolly Resort Ponte Di Legno
-Palace Residence 2
-Palace Residence I
-Residence Borgo al Sole
-Residence Camporosso II
-Residence Cervinia 2
-Residence La Splaza
-Residence Laurin
-Residence Rio Falzè
-Residence Sport Hotel Astoria
-Villaggio Turistico Ploner
-Lanzarote
-Camel's Spring Club
-Club Las Calas
-Club Los Molinos
-Club Nautilus
-Diamond Club Calypso
-Diamond Club Maritima
-Las Brisas
-Las Casitas
-Madeira
-Alto Lido of Madeira
-Hotel Cais Da Oliveira
-Pestana Carlton Tower Suites
-Pestana Grand Hotel
-Pestana Miramar
-Pestana Palms
-Pestana Promenade Hotel Ocean Resort
-Pestana Village
-Porto Mare Residence
-Quinta Splendida Jardim Botanico
-Roca Mar Sports and Country Club
-Mallorca
-Garden Lago
-Ona Aucanada
-Ona Cala Pi Club
-Ona Village Cala D'Or
-Malta
-Club Riza
-Santana Resort Club
-Solana Hotel
-Sunny Coast Resort Club
-Northern France
-Karma Résidence Normande
-Other Islands In Greece
-Anezina Village
-Golden Coast Holiday Club
-Rigas Hotel
-Portugal
-Albufeira Jardim 2
-Alfagar Village
-Alto Golf and Country Club
-Balaia Park
-Balaia Village
-Clube Albufeira Garden Village
-Clube Pinhal da Foz
-Clube Praia da Oura
-Clube Vilarosa
-Dom Pedro Lagos
-Dom Pedro Portobelo
-Four Seasons Vilamoura
-Golden Club Cabanas
-Hotel Ap. Vila Gale Ampalius
-Hotel Apartamento Forte Do Vale
-Jardim do Vau
-Monte Carvoeiro Clube
-Oasis Village
-Oura-View Beach Club
-Ourabay Resort
-Ourapraia Aparthotel
-Pestana Palm Gardens
-Royal Dom Pedro Vilamoura Resort
-Vila Magna Bellavista Avenida
-Rhodes
-Sun Beach Hotel
-Rome Area
-Carpediem Roma Golf Club
-Sardinia
-Hotel Baia Caddinas
-Porto Rotondo Gardens
-Portolaconia Residence
-Residence Verde Mare
-Residenza Bouganville
-Scotland
-Macdonald Spey Valley - 4 Nights
-Macdonald Spey Valley - 3 Nights
-Serbia
-Club Satelit
-South Of France
-CLUBHOTEL PIERRE &amp; VACANCES ST MANDRIER
-Le Club Mougins by Diamond Resorts
-Le Golfe Bleu
-Vacances Vaugrenier
-Sweden
-Belwobyn Are
-Fjall-Lien
-Fjallbyn
-Fjallvattnet
-Hogfjallet
-Holiday Club Are
-Holiday Club Tegefjäll
-SkiStar Vacation Club Tandadalens Fjällhotell
-Switzerland
-Castel Club
-Portes du Soleil
-Residence Chamossaire
-Royal Alpage Club
-Résidence Diablerets - Parc A
-Résidence Mont-Calme
-Tenerife North
-Club Casablanca
-Club Tarahal
-Tenerife South
-Altamira Club
-Beverly Hills Heights
-CLC Monterey
-CLC Sunningdale Village
-CLC The Paradise Club
-Club El Beril
-Club El Marqués
-Club Olympus at Garden City
-Club Tenerife
-El Marqués
-El Marqués Palace
-Elite Apartments at Fairways Club
-Fairways Club
-Grand Muthu Golf Plaza
-Hollywood Mirage Club
-Las Rosas
-Los Claveles
-Muthu Royal Park Albatros
-P&amp;V Marazul Del Sur
-Palm Beach Club
-Pearly Grey Ocean Club
-Regency Heights at Neptuno
-Royal Park Albatros Club
-Royal Sun Resort
-Royal Sunset Beach Club by Diamond Resorts
-Royal Tenerife Country Club by Diamond Resorts
-Santa Bárbara Golf &amp; Ocean Club by Diamond Resorts
-Sunset Bay Club by Diamond Resorts
-Sunset Harbour Club by Diamond Resorts
-Sunset View Club by Diamond Resorts
-The Harbour Club
-The Regency Club Tenerife
-The Regency Country Club
-Vigilia Park
-WimPen Sueño Azul
-Turkey
-Akropol Termal
-Club Patara
-DORAMAN Resort &amp; Aqua Tatil Koyu
-Emet Termal Resort
-Hattusa VTC Erzin
-Hattusa VTC Kazdaglari
-Hayitli Merada Termal
-Heramis Thermal Resort
-Ilgaz Mountain Resort
-LAGUNA TERMAL RESORT AND SPA
-Nesa Palas
-SAFA SORGUN THERMAL HOTEL
-Tassaray Hotel - 3 Nights
-Tassaray Hotel - 7 Nights
-Terma City
-Venice Area
-Le Barchesse Di Villa Corner
-Wales
-Macdonald Plas Talgarth - 3 Nights
-Macdonald Plas Talgarth - 4 Nights
-MEXICO
-Acapulco
-Alba Suites Acapulco
-Hotel &amp; Club Aladino's
-Park Royal Beach Acapulco
-Playa Acapulco Beach At Playa Suites
-Baja And Cabo San Lucas
-Cabo Azul Resort and Spa
-City Express Suites Tijuana Rio - 3 Nights
-City Express Suites Tijuana Rio - 4 Nights
-Club Solaris Los Cabos All Inclusive
-Hacienda Santa Verónica
-Paradisus Cabo Real
-Park Royal Homestay Los Cabos
-Tesoro Los Cabos
-Vivelo Club Vacacional at Rancho Tecate
-Cancun And Cozumel
-Allegro Cozumel
-Allegro Cozumel First Club
-Allegro Playacar
-Allegro Playacar First Club
-BPPC @ Luxury Bahia Principe Akumal
-BlueBay Grand Esmeralda
-Club Melia At Melia Cozumel
-Club Melia At Paradisus Cancun
-Club Solaris Cancún All Inclusive
-Club Solaris GR Caribe All Inclusive
-Desire Resort and Spa
-Desire Riviera Maya Pearl Resort
-El Dorado Palms
-Golden Parnassus Resort And Spa
-Golden Shores &amp; Crown Paradise Club Cancún
-Grand Bahia Principe Coba
-Grand Bahia Principe Tulum
-Grand Palladium Colonial Resort &amp; Spa at Riviera Maya
-Grand Palladium Kantenah Resort &amp; Spa at Riviera Maya
-Grand Palladium White Sand Resort &amp; Spa at Riviera Maya
-Grand Park Royal Cancún
-Grand Velas All Suites &amp; Spa Resort Riviera Maya Grand Class
-Hacienda Tres Rios
-Hidden Beach Resort
-Hotel Flamingo Cancun Resort
-Hotel Xcaret Arte
-Hotel Xcaret Mexico Family Section at Mexico Destination Club
-Hotel Xcaret Mexico SPA Section at Mexico Destination Club
-IBEROSTAR Cozumel
-IBEROSTAR Paraiso Beach
-IBEROSTAR Paraiso Lindo
-IBEROSTAR Paraiso Maya
-IBEROSTAR Quetzal
-Imperial Fiesta Club At Hotel Casa Maya
-Kore Tulum Retreat and Spa Resort
-Luxury Bahia Principe Sian Ka'An
-Mvc at Paradisus Cancun
-Occidental Cozumel
-Occidental at Xcaret Destination
-Ocean Coral &amp; Turquesa
-Ocean Maya Royale
-Ocean Riviera Paradise
-Palafitos Overwater Bungalows at El Dorado Maroma Special Promo
-Regency Club @ Sunscape Sabor Cozumel
-Residence INN by Marriott Cancun
-Residence Inn by Marriott Merida
-Seadust Cancun Family Resort
-Sunset Fishermen Spa &amp; Resort
-Sunset Royal Beach
-Temptation Resort Spa
-The Reef 28
-The Reef Cocobeach
-TravelSmart at Royalton CHIC Suites Cancun
-TravelSmart at Royalton Riviera Cancun
-Viva Vacation Club At Viva Wyndham Maya
-WIVC Coral Mar
-Wyndham Mérida - 3 Nights
-Wyndham Mérida - 4 Nights
-Guadalajara
-Bosque La Luna
-Guadalajara Plaza Express Lopez Mateos - 3 Nights
-Guadalajara Plaza Express Lopez Mateos - 4 Nights
-Huatulco
-Marina Resort Huatulco - 3 Nights
-Marina Resort Huatulco - 4 Nights
-Park Royal Beach Huatulco
-Ixtapa &amp; Zihuatanejo
-Coral Ixtapa
-Pacifica Spa
-Pacífica Aqua
-Pacífica Club
-Pacífica Golf
-Pacífica Grand
-Pacífica Master Sands
-Pacífica Sands
-Park Royal Beach Ixtapa
-Tesoro Ixtapa
-Manzanillo
-Karmina Palace
-Tesoro Manzanillo
-Mazatlan
-Condominios Islas del Sol
-Pacific Palace Tower
-Park Royal Beach Resort Mazatlán by Royal Holiday
-Royal Villas
-The Inn at Mazatlán
-Mexico - Inland
-Arenas del Mar Resort
-Bahía Escondida - 3 Nights
-Bahía Escondida - 4 Nights
-Bosque La Luna - 4 Nights
-City Express Campeche - 3 Nights
-City Centro San Luis Potosi - 3 Nights
-City Centro San Luis Potosi - 4 Nights
-City Express Campeche
-City Express Campeche - 4 Nights
-City Express Junior Aguascalientes Centro
-City Express Junior Aguascalientes Centro - 3 Nights
-City Express Junior Aguascalientes Centro - 4 Nights
-Coral Cuernavaca Resort &amp; Spa
-Fortin de Las Flores Resort Club
-Gran Casa Sayula Hotel - 2 Nights
-Holiday Inn Express &amp; Suites Puebla Angelopolis
-Holiday Inn Express &amp; Suites Puebla Angelopolis - 3 Nights
-Holiday Inn Express &amp; Suites Puebla Angelopolis - 4 Nights
-Hotel 5 Inn Plus
-Hotel Agua Escondida
-Hotel Agua Escondida - 3 Nights
-Hotel Agua Escondida - 4 Nights
-Hotel y Club Villa de la Plata
-La Rinconada Santa Fe Morelos
-MyPlace Leisure Home @ Santo Domingo - 3 Nights
-MyPlace Leisure Home @ Santo Domingo - 4 Nights
-MyPlace Leisure Home @ The Gallery Condesa - 3 Nights
-Myplace Leisure Home @ Donceles - 3 Nights
-Splash Inn León
-Suites Xadani
-Vista Express Morelia - 3 Nights
-Mexico City
-Hotel City Centro Ciudad de Mexico - 3 Nights
-Hotel City Centro Ciudad de Mexico - 4 Nights
-MyPlace Leisure Home @ Zócalo - 3 Nights
-Puerto Vallarta
-Club Melia at Meliá Puerto Vallarta
-Club Velas Vallarta
-Crown Paradise Golden
-Grand Palladium Vallarta
-Grand Park Royal Puerto Vallarta
-Grand Velas Riviera Nayarit
-Hotel Las Palmas Beach Resort
-IBEROSTAR Playa Mita
-MVC at Meliá Puerto Vallarta
-Marina de Oro
-Marival Distinct Luxury Residences
-Marival Emotions Resort and Suites
-Occidental Nuevo Vallarta
-Occidental Nuevo Vallarta First Club
-Royal Holiday- Park Royal Tules
-Torre Condomar En Sunscape Puerto Vallarta Resort &amp; Spa
-MIDDLE EAST
-Lebanon
-Ehden Country Club
-Mena House Club
-Pineland Resort and Country Club</p>
+
+<h1>🏨 7-Day Hotel Collection</h1>
+<p><strong>Hotels Organized by State (USA) and Continent (Worldwide)</strong></p>
+
+<div class="toc">
+<h2>📑 Table of Contents</h2>
+<ul>
+<li><a href="#united-states">United States (By State)</a></li>
+<li><a href="#africa">Africa</a></li>
+<li><a href="#asia">Asia</a></li>
+<li><a href="#australia-south-pacific">Australia / South Pacific</a></li>
+<li><a href="#canada">Canada</a></li>
+<li><a href="#caribbean">Caribbean</a></li>
+<li><a href="#central-south-america">Central / South America</a></li>
+<li><a href="#europe">Europe</a></li>
+</ul>
+</div>
+
+<hr>
+
+<h1 id="united-states">🇺🇸 UNITED STATES</h1>
+<p><em>Hotels organized alphabetically by state</em></p>
+
+<div class="state">
+<h2 id="arizona">ARIZONA</h2>
+
+<h3>Lake Havasu City</h3>
+<ul>
+<li>Havasu Dunes Resort</li>
+<li>Havasu Sands Resort</li>
+<li>Sapphire Resorts @ Havasu Dunes</li>
+</ul>
+
+<h3>Phoenix Area</h3>
+<ul>
+<li>Hampton Inn & Suites Scottsdale Riverwalk - 3 Nights</li>
+<li>Hilton Phoenix Resort at the Peak - 3 Nights</li>
+<li>Residence Inn by Marriott Prescott - 3 Nights</li>
+<li>Scottsdale Links Resort</li>
+<li>Shell Vacations Club @ The Legacy Golf Resort</li>
+<li>SpringHill Suites by Marriott Prescott - 3 Nights</li>
+<li>Wigwam Arizona - 3 Nights</li>
+<li>WorldMark Scottsdale - 3 Nights</li>
+<li>WorldMark Scottsdale - 5 Nights</li>
+</ul>
+
+<h3>Sedona Area</h3>
+<ul>
+<li>Arroyo Pinion Hotel - 3 Nights</li>
+<li>Sedona Summit</li>
+</ul>
+
+<h3>Tucson Area</h3>
+<ul>
+<li>Hilton Tucson East - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="arkansas">ARKANSAS</h2>
+
+<h3>Arkansas</h3>
+<ul>
+<li>Club Wyndham Resort at Fairfield Bay</li>
+<li>Crown Point Resort</li>
+<li>Emerald Isle Condominiums</li>
+<li>Los Indios Escapes Cherokee Village</li>
+<li>South Shore Lake Resort</li>
+<li>The Wharf</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="california">CALIFORNIA</h2>
+
+<h3>Bakersfield</h3>
+<ul>
+<li>Stallion Springs Resort</li>
+</ul>
+
+<h3>Lake Tahoe Area</h3>
+<ul>
+<li>Americana Village</li>
+<li>Forest Suites Resort at Heavenly Village - 3 Nights</li>
+<li>Olympic Village Inn</li>
+<li>Red Wolf Squaw Valley</li>
+<li>Tahoe Beach & Ski Club</li>
+</ul>
+
+<h3>Los Angeles Area</h3>
+<ul>
+<li>Holiday Inn and Suites Santa Maria - 3 Nights</li>
+</ul>
+
+<h3>Orange County</h3>
+<ul>
+<li>Casablanca Inn - 3 Nights</li>
+</ul>
+
+<h3>Palm Springs Area</h3>
+<ul>
+<li>Palm Canyon Resort</li>
+<li>Staybridge Suites Cathedral City - Palm Springs - 3 Nights</li>
+</ul>
+
+<h3>San Bernardino Area</h3>
+<ul>
+<li>Sapphire Resorts @ Snow Lake Lodge</li>
+</ul>
+
+<h3>San Diego Area</h3>
+<ul>
+<li>Best Western Plus Island Palms Hotel & Marina - 3 Nights</li>
+<li>Humphrey's Half Moon Inn & Suites - 3 Nights</li>
+<li>The Dana on Mission Bay - 3 Nights</li>
+</ul>
+
+<h3>San Francisco Area</h3>
+<ul>
+<li>The Sandman Hotel - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="colorado">COLORADO</h2>
+
+<h3>Colorado - South</h3>
+<ul>
+<li>Wyndham Pagosa</li>
+</ul>
+
+<h3>Steamboat Springs</h3>
+<ul>
+<li>Legacy Vacation Club Steamboat Springs - Hilltop</li>
+<li>Legacy Vacation Resort Steamboat Suites</li>
+</ul>
+
+<h3>Vail And Breckenridge Area</h3>
+<ul>
+<li>The Christie Lodge</li>
+</ul>
+
+<h3>Winter Park</h3>
+<ul>
+<li>The Mountainside at SilverCreek</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="district-of-columbia">DISTRICT OF COLUMBIA</h2>
+
+<h3>District Of Columbia</h3>
+<ul>
+<li>The Embassy Row Hotel - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="florida">FLORIDA</h2>
+
+<h3>Daytona Beach Area</h3>
+<ul>
+<li>Bahama House - 3 Nights</li>
+<li>Grand Lakefront Resort Club USA / Holly Bluff Marina</li>
+<li>Hyatt Place Daytona Beach - Oceanfront - 3 Nights</li>
+<li>Vacation Villas</li>
+</ul>
+
+<h3>Florida Keys</h3>
+<ul>
+<li>Skipjack Resort Suites and Marina - 3 Nights</li>
+</ul>
+
+<h3>Fort Lauderdale Area</h3>
+<ul>
+<li>Beachwalk Resort - 3 Nights</li>
+<li>Ocean Manor Resort - 3 Nights</li>
+</ul>
+
+<h3>Ft Walton / Destin</h3>
+<ul>
+<li>Marina Bay Resort</li>
+</ul>
+
+<h3>Lake Okeechobee Area</h3>
+<ul>
+<li>Harder Hall Lakeside Villas</li>
+</ul>
+
+<h3>Miami Area</h3>
+<ul>
+<li>Doubletree by Hilton Deerfield Beach-Boca Raton - 3 Nights</li>
+<li>Newport Beachside Hotel & Resort - 3 Nights</li>
+<li>Park Royal Miami Beach - 3 Nights</li>
+<li>Park Royal Miami Beach - 4 Nights</li>
+</ul>
+
+<h3>Naples - Fort Myers Area</h3>
+<ul>
+<li>Bayfront Inn on Fifth - 3 Nights</li>
+<li>Lehigh Resort Club</li>
+<li>Staybridge Suites Naples - Gulf Coast - 3 Nights</li>
+<li>Staybridge Suites Naples Marco Island - 3 Nights</li>
+<li>Westin Cape Coral Resorts at Marina Village - 3 Nights</li>
+</ul>
+
+<h3>Orlando - Kissimmee Area</h3>
+<ul>
+<li>Alhambra Villas at Poinciana</li>
+<li>Alhambra at Poinciana</li>
+<li>Barefoot'n in the Keys at Old Town</li>
+<li>Blue Tree Resort at Lake Buena Vista</li>
+<li>Bryan's Spanish Cove</li>
+<li>Calypso Cay</li>
+<li>Club Sevilla</li>
+<li>Club Wyndham Cypress Palms</li>
+<li>Club Wyndham Star Island</li>
+<li>Cypress Pointe Grande Villas Resort</li>
+<li>Cypress Pointe Resort</li>
+<li>Doubletree by Hilton Orlando at SeaWorld - 3 Nights</li>
+<li>Driftwood Worldgate Resort</li>
+<li>Festiva Orlando Resort</li>
+<li>Florida Vacation Villas</li>
+<li>GEVC at Club Sevilla</li>
+<li>Grande Villas</li>
+<li>High Point World Resort</li>
+<li>Legacy Vacation Club Lake Buena Vista</li>
+<li>Legacy Vacation Club Orlando - Oaks</li>
+<li>Legacy Vacation Club Orlando-Resort World</li>
+<li>Legacy Vacation Club Orlando-Spas</li>
+<li>Orbit One Vacation Villas</li>
+<li>Park Royal Homestay Orlando</li>
+<li>Red Lion Hotel Orlando Lake Buena Vista South - 3 Nights</li>
+<li>Rhc/High Point World Resort</li>
+<li>Silver Lake Resort</li>
+<li>Silver Lake Resort-Silver Points</li>
+<li>Summer Bay Orlando By Exploria Resorts</li>
+<li>The Barefoot Suites By Ascend Collection</li>
+</ul>
+
+<h3>Tampa - St Petersburg Area</h3>
+<ul>
+<li>Aloft Midtown Tampa - 3 Nights</li>
+<li>Harborside Suites - 3 Nights</li>
+<li>Residence Inn Oldsmar Tampa - 3 Nights</li>
+<li>Residence Inn by Marriott Tampa Suncoast Parkway - 3 Nights</li>
+<li>Safety Harbor Resort and Spa - 3 Nights</li>
+<li>The Barrymore Hotel - 3 Nights</li>
+</ul>
+
+<h3>Vero Beach - Melbourne Area</h3>
+<ul>
+<li>Pirate's Cove Resort & Marina - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="georgia">GEORGIA</h2>
+
+<h3>Georgia</h3>
+<ul>
+<li>Brassie Knob Villas at Sky Valley</li>
+<li>Holiday Inn Club Vacations Apple Mountain Resort</li>
+<li>Time Shares of Sky Valley</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="idaho">IDAHO</h2>
+
+<h3>Idaho</h3>
+<ul>
+<li>Hot Springs Village</li>
+<li>The Timbers Condominiums At Island Park Village</li>
+</ul>
+
+<h3>Idaho - North</h3>
+<ul>
+<li>Stoneridge Resort</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="illinois">ILLINOIS</h2>
+
+<h3>Illinois</h3>
+<ul>
+<li>Holiday Inn Club Vacations Fox River Resort</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="iowa">IOWA</h2>
+
+<h3>Iowa</h3>
+<ul>
+<li>Sunrise Cove at Village West</li>
+<li>West Oaks</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="louisiana">LOUISIANA</h2>
+
+<h3>Louisiana</h3>
+<ul>
+<li>Holiday Inn Express St. Charles Ave</li>
+<li>Hyatt House New Orleans -3 Nights</li>
+<li>Hyatt Regency New Orleans - 3 Nights</li>
+<li>The Troubadour Hotel, a Tapestry Collection by Hilton - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="maine">MAINE</h2>
+
+<h3>Maine - Coastal</h3>
+<ul>
+<li>Sea Mist Resort of Maine</li>
+<li>Trade Winds on the Bay</li>
+</ul>
+
+<h3>Maine - Inland</h3>
+<ul>
+<li>Bethel Inn</li>
+<li>Grand Summit Resort Hotel at Sunday River</li>
+<li>River View Resort</li>
+<li>The Jordan Grand Hotel At Sunday River</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="maryland">MARYLAND</h2>
+
+<h3>Maryland</h3>
+<ul>
+<li>Crowne Plaza Baltimore - Inner Harbor - 3 Nights</li>
+<li>Staybridge Suites Baltimore Inner Harbor - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="massachusetts">MASSACHUSETTS</h2>
+
+<h3>Massachusetts - Coastal</h3>
+<ul>
+<li>Cape Cod Holiday Estates</li>
+<li>Courtyard Resort</li>
+<li>Pier 7 Condominiums</li>
+<li>Sandcastle Resort</li>
+<li>Sea Mist Resort</li>
+<li>Sea Winds Ii</li>
+<li>The Cove at Yarmouth</li>
+<li>The Edgewater Beach Resort</li>
+<li>The Harwich Port</li>
+</ul>
+
+<h3>Massachusetts - Inland</h3>
+<ul>
+<li>Holiday Inn Club Vacations Oak 'n Spruce Resort</li>
+<li>Wind in the Pines</li>
+<li>Wind in the Pines II</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="michigan">MICHIGAN</h2>
+
+<h3>Michigan</h3>
+<ul>
+<li>Pinestead Reef-Vip</li>
+<li>Shanty Creek Lodges</li>
+<li>The Inn at St Ives</li>
+<li>Vacation Club</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="minnesota">MINNESOTA</h2>
+
+<h3>Minnesota</h3>
+<ul>
+<li>Breezy Center at Breezy Point Resort</li>
+<li>Breezy Point Timeshare</li>
+<li>Breezy Shores Resort & Beach Club</li>
+<li>Causeway on Gull</li>
+<li>Eagle's Nest at Breezy Point</li>
+<li>Lake Carlos Villas</li>
+<li>North Beach</li>
+<li>Quadna Mountain Resort</li>
+<li>The Village at Izatys Resort</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="mississippi">MISSISSIPPI</h2>
+
+<h3>Mississippi</h3>
+<ul>
+<li>The Villas of Hickory Hill</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="missouri">MISSOURI</h2>
+
+<h3>Branson Area</h3>
+<ul>
+<li>Club Wyndham Branson at the Falls</li>
+<li>Holiday Inn Club Vacations Holiday Hills</li>
+<li>Holiday Inn Club Vacations Ozark Mountain Resort</li>
+<li>MROP at Eagle's Nest</li>
+<li>Oak Ridge at Branson</li>
+<li>Stonebridge Village Condominiums</li>
+<li>Surrey Vacation Resort</li>
+<li>The Park @ Foxborough</li>
+<li>The Retreat of Foxborough by LGI</li>
+<li>The Shores Of Trl At Kimberling Inn</li>
+<li>The Suites at Fall Creek</li>
+<li>Westgate Branson Woods</li>
+</ul>
+
+<h3>Lake Of The Ozark</h3>
+<ul>
+<li>Lakeview Resort</li>
+<li>Nantucket Bay Condominiums</li>
+<li>Port Elsewhere</li>
+<li>Treetop Condominiums</li>
+<li>Vintage Landing Condominiums</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="montana">MONTANA</h2>
+
+<h3>Montana</h3>
+<ul>
+<li>Meadow Lake Golf Resort</li>
+<li>Nenastako Village at Meadow Lake</li>
+<li>The Edelweiss</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="nevada">NEVADA</h2>
+
+<h3>Las Vegas Area</h3>
+<ul>
+<li>Cancun Resort Las Vegas</li>
+<li>Club De Soleil</li>
+<li>Club Wyndham Desert Blue</li>
+<li>Club Wyndham Desert Blue - 3 Nights</li>
+<li>Club Wyndham Grand Desert</li>
+<li>Club Wyndham Tropicana</li>
+<li>Grand Destination Vacation Club At The Oasis Resort</li>
+<li>OYO Hotel & Casino Las Vegas - 3 Nights</li>
+<li>OYO Hotel & Casino Las Vegas - 5 Nights</li>
+<li>Shell Vacations Club @ Desert Rose Resort</li>
+<li>Tahiti Vacation Club</li>
+<li>Tahiti Village</li>
+<li>The Carriage House</li>
+</ul>
+
+<h3>Reno Area</h3>
+<ul>
+<li>Legacy Vacation Club Reno</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="new-hampshire">NEW HAMPSHIRE</h2>
+
+<h3>New Hampshire - Inland</h3>
+<ul>
+<li>Cold Spring Resort</li>
+<li>InnSeason Resorts Pollard Brook</li>
+<li>Mittersill Alpine Resort</li>
+<li>The Mountain View Resort</li>
+</ul>
+
+<h3>New Hampshire - Lakes Region</h3>
+<ul>
+<li>Steele Hill Resorts-East</li>
+<li>Steele Hill Resorts-South</li>
+<li>Summit Resort</li>
+<li>The Center Harbor Inn</li>
+<li>The Windrifter</li>
+<li>Village of Winnipesaukee</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="new-jersey">NEW JERSEY</h2>
+
+<h3>Atlantic City</h3>
+<ul>
+<li>Esplanade Suites, a Sundance Vacations Property - 3 Nights</li>
+<li>FantaSea Resorts - Flagship Resort</li>
+<li>FantaSea Resorts at Atlantic Palace</li>
+<li>Fantasea Resorts La Sammana</li>
+<li>Legacy Vacation Club Brigantine Beach</li>
+<li>Rhc/Brigantine Beach Club</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="new-mexico">NEW MEXICO</h2>
+
+<h3>New Mexico</h3>
+<ul>
+<li>Champions' Run Condominiums</li>
+<li>High Sierra</li>
+<li>Pinecliff Village</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="new-york">NEW YORK</h2>
+
+<h3>Catskills And Adirondacks</h3>
+<ul>
+<li>Kaatskill Mountain Club</li>
+</ul>
+
+<h3>New York City</h3>
+<ul>
+<li>DoubleTree by Hilton New York Times Square West - 3 Nights</li>
+<li>Holiday Inn Manhattan Financial District - 3 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="north-carolina">NORTH CAROLINA</h2>
+
+<h3>North Carolina - Coastal</h3>
+<ul>
+<li>A Place at the Beach III</li>
+<li>Beachwoods</li>
+<li>Peppertree Atlantic Beach III</li>
+<li>Ramada Plaza Nags Head Oceanfront</li>
+<li>Ramada Plaza Nags Head Oceanfront - 3 Nights</li>
+<li>Ramada Plaza Nags Head Oceanfront - 5 Nights</li>
+</ul>
+
+<h3>North Carolina - Inland</h3>
+<ul>
+<li>Fairway Forest at Sapphire Valley</li>
+<li>Smoketree Lodge</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="oregon">OREGON</h2>
+
+<h3>Oregon - Inland</h3>
+<ul>
+<li>Club Wyndham Portland Waterfront Park</li>
+<li>Whispering Woods II</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="pennsylvania">PENNSYLVANIA</h2>
+
+<h3>Pennsylvania - Western</h3>
+<ul>
+<li>Wolf Run Manor at Treasure Lake</li>
+</ul>
+
+<h3>Poconos</h3>
+<ul>
+<li>CARRIAGE HOUSE COUNTRY CLUB</li>
+<li>Eagle Village Resort</li>
+<li>Endless Mountain Resort</li>
+<li>Ridge Top - Shawnee</li>
+<li>River Village I - Shawnee</li>
+<li>River Village II - Shawnee</li>
+<li>Tree Tops at Pocono Mountain Villas by Exploria Resorts</li>
+<li>Woodfield Manor, a Sundance Vacations Property - 3 Nights</li>
+<li>WorldMark Ridge Top - Shawnee</li>
+<li>WorldMark River Village I - Shawnee</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="south-carolina">SOUTH CAROLINA</h2>
+
+<h3>Charleston Area</h3>
+<ul>
+<li>Cambria Charleston Riverview Hotel - 3 Nights</li>
+</ul>
+
+<h3>Hilton Head Islands</h3>
+<ul>
+<li>Holiday Inn Express Hilton Head Island - 3 Nights</li>
+</ul>
+
+<h3>Myrtle Beach</h3>
+<ul>
+<li>Grand Palms Resort</li>
+<li>Grand Palms Resort Villas</li>
+<li>Marina Inn at Grande Dunes - 3 Nights</li>
+<li>Myrtle Beach Resort by Sundance Property- 3 Nights</li>
+<li>North Shore Oceanfront Hotel - 3 Nights</li>
+<li>Ocean Villas Beach Resort</li>
+<li>Presidential Villas at Grand Palms Resort</li>
+<li>Sand Dunes Resort & Suites - 3 Nights</li>
+<li>Sand Dunes Resort & Suites - 5 Nights</li>
+<li>The Yachtsman</li>
+</ul>
+
+<h3>South Carolina - Inland</h3>
+<ul>
+<li>Lake Marion Resort and Marina</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="south-dakota">SOUTH DAKOTA</h2>
+
+<h3>South Dakota</h3>
+<ul>
+<li>Barefoot Condominiums</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="tennessee">TENNESSEE</h2>
+
+<h3>Gatlinburg / Pigeon Forge</h3>
+<ul>
+<li>Laurel Point Resort</li>
+<li>Laurel Springs Resort</li>
+<li>Mountain Meadows By Exploria Resorts</li>
+<li>Pinecrest Townhomes</li>
+<li>Ski View Mountain Resort</li>
+<li>Town Village @ Gatlinburg By Exploria Resorts</li>
+</ul>
+
+<h3>Knoxville Area</h3>
+<ul>
+<li>Club Wyndham Resort at Fairfield Glade</li>
+<li>Hiawatha Resort East at Lake Tansi</li>
+<li>Hiawatha Resort West at Lake Tansi</li>
+</ul>
+
+<h3>Nashville Area</h3>
+<ul>
+<li>Clarion Nashville Downtown-Stadium - 3 Nights</li>
+<li>Holiday Inn Vanderbilt - 3 Nights</li>
+<li>Margaritaville Vacation Club By Wyndham - Nashville</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="texas">TEXAS</h2>
+
+<h3>Dallas Area</h3>
+<ul>
+<li>Holiday Inn Club Vacations Villages Resort</li>
+<li>The Lodge</li>
+</ul>
+
+<h3>Houston Area</h3>
+<ul>
+<li>Club Quarters Hotel Houston - 3 Nights</li>
+</ul>
+
+<h3>Lake Conroe Area</h3>
+<ul>
+<li>Holiday Inn Club Vacations Piney Shores Resort</li>
+<li>Inverness at Del Lago</li>
+<li>Villas on the Lake</li>
+</ul>
+
+<h3>San Antonio Area</h3>
+<ul>
+<li>Holiday Inn Riverwalk San Antonio - 3 Nights</li>
+</ul>
+
+<h3>South Padre Island</h3>
+<ul>
+<li>Fort Brown Condo Shares</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="utah">UTAH</h2>
+
+<h3>Brian Head Ski Area</h3>
+<ul>
+<li>Cedar Breaks Lodge</li>
+<li>Copper Chase Condominiums</li>
+</ul>
+
+<h3>Park City Area</h3>
+<ul>
+<li>Park Hotel Condominiums</li>
+<li>Park Plaza</li>
+<li>Sapphire Resorts @ Park Regency</li>
+<li>Skiers Lodge</li>
+</ul>
+
+<h3>Salt Lake City Area</h3>
+<ul>
+<li>Iron Blosam Lodge @ Snowbird Ski & Summer Resort</li>
+</ul>
+
+<h3>Utah - North</h3>
+<ul>
+<li>Bear Lake Timeshare</li>
+<li>Powder Ridge Village</li>
+<li>The Resort at Bear Lake</li>
+<li>Wolf Creek Village</li>
+<li>Wolf Creek Village II</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="vermont">VERMONT</h2>
+
+<h3>Vermont</h3>
+<ul>
+<li>Cedarbrook</li>
+<li>Crafts Inn</li>
+<li>Grand Summit Resort Hotel-Mt. Snow</li>
+<li>Jackson Gore Inn</li>
+<li>Killington Chalet Snowflake/Flur</li>
+<li>Killington Chalet Snowking/Snowqueen</li>
+<li>North Star Vacation Club</li>
+<li>Smugglers' Notch Resort</li>
+<li>The Village Green at Stowe</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="virgin-islands">VIRGIN ISLANDS</h2>
+
+<h3>Virgin Islands</h3>
+<ul>
+<li>Wyndham St. Thomas - 5 Nights</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="virginia">VIRGINIA</h2>
+
+<h3>Mcgaheysville Area</h3>
+<ul>
+<li>The Summit at Massanutten</li>
+<li>Woodstone at Massanutten</li>
+</ul>
+
+<h3>Shenandoah Valley</h3>
+<ul>
+<li>Senedo Springs</li>
+<li>Skyline Ranch Resort</li>
+<li>Stony Court at Bryce Mountain</li>
+<li>The Pines</li>
+</ul>
+
+<h3>Virginia Beach Area</h3>
+<ul>
+<li>Ocean Beach Club</li>
+</ul>
+
+<h3>Williamsburg</h3>
+<ul>
+<li>Club Wyndham Kingsgate</li>
+<li>Club Wyndham Patriots' Place</li>
+<li>Greensprings Vacation Resort</li>
+<li>The Historic Powhatan Resort</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="washington">WASHINGTON</h2>
+
+<h3>Washington</h3>
+<ul>
+<li>Lake Chelan Shores</li>
+<li>Surfcrest Condominiums</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="west-virginia">WEST VIRGINIA</h2>
+
+<h3>West Virginia</h3>
+<ul>
+<li>Lakeview Golf Resort and Spa</li>
+</ul>
+</div>
+
+<div class="state">
+<h2 id="wisconsin">WISCONSIN</h2>
+
+<h3>Green Bay Area</h3>
+<ul>
+<li>Fox Hills Condos</li>
+<li>Waterbury Inn</li>
+</ul>
+
+<h3>Milwaukee Area</h3>
+<ul>
+<li>Olympia Vacation Owners</li>
+</ul>
+
+<h3>The Dells Area</h3>
+<ul>
+<li>Club Wyndham Glacier Canyon - 3 Nights</li>
+<li>Mirror Lake Resort</li>
+<li>Peppertree at Tamarack</li>
+<li>Staybridge Suites Wisconsin Dells - Lake Delton - 3 Nights</li>
+</ul>
+
+<h3>Wisconsin - North</h3>
+<ul>
+<li>Telemark</li>
+</ul>
+</div>
+
+<hr>
+
+<h1 id="worldwide-locations">🌍 WORLDWIDE LOCATIONS</h1>
+<p><em>Hotels organized by continent and country</em></p>
+
+<div class="continent">
+<h1 id="africa">🌍 AFRICA</h1>
+
+<div class="country">
+<h2>Egypt</h2>
+<ul>
+<li>Coral Hills Resort</li>
+<li>Domina Coral Bay Resort & Casino</li>
+<li>El Morgan Touristic Village</li>
+<li>Isis Island Aswan</li>
+<li>Le Pacha Resort</li>
+<li>Lillyland Beach Club</li>
+<li>Logaina Resort</li>
+<li>Mazar Resort & Spa</li>
+<li>Mirette Touristic Village</li>
+<li>Moon Beach Club</li>
+<li>Naama Bay Resort</li>
+<li>Regina Beach</li>
+<li>Royal Beach Resort</li>
+<li>Royal Paradise Resort</li>
+<li>Santa Monica</li>
+<li>Sharks Bay Oasis Resort & Residence</li>
+<li>Sharm Bride Hotel And Residence</li>
+<li>Sharm Dreams Vacation Club</li>
+<li>Sharm In Amarein Hotel</li>
+<li>Shores Amphoras Resort</li>
+<li>Sindbad Aqua Hotel & SPA</li>
+<li>Viking Club</li>
+<li>Zahabia Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Kenya</h2>
+<ul>
+<li>Mwembe Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Morocco</h2>
+<ul>
+<li>Marrakech Palm Club</li>
+<li>Residence Amina</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Senegal</h2>
+<ul>
+<li>Neptune Beach Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>South Africa</h2>
+<ul>
+<li>Castleburn</li>
+<li>Glenmore Sands And Cabanas</li>
+<li>Port Owen Marina</li>
+<li>Sudwala Lodge</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Tunisia</h2>
+<ul>
+<li>Arabesque</li>
+<li>Residence Djerba Paradise</li>
+</ul>
+</div>
+</div>
+
+<div class="continent">
+<h1 id="asia">🌏 ASIA</h1>
+
+<div class="country">
+<h2>Cambodia</h2>
+<ul>
+<li>Hotel Somadevi Angkor Boutique & Resort - 4 Nights</li>
+<li>Hotel Somadevi Angkor Boutique & Resort-3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>China</h2>
+<ul>
+<li>Atour Hotel Pudong Zhangjiang Park - 3 Nights</li>
+<li>Best Western Plus Qingxinyuan Hotel Zhangjiajie - 3 Nights</li>
+<li>Best Western Plus Qingxinyuan Hotel Zhangjiajie - 4 Nights</li>
+<li>Blg-Beijing Longtou Apartment</li>
+<li>Boao Island Forest Hotel</li>
+<li>Fvc @Lijiang Huasheng Hotel</li>
+<li>HIVC @ Chongqing Huanmei Vacation Apartment</li>
+<li>Hainan Wanning Jinlvju Apartment</li>
+<li>Libre Resort Huangshan</li>
+<li>Qinhuangdao Jinjiang Peninsula Season Apartment Hotel</li>
+<li>SRC @ Platinum Vacation Residences Lijiang</li>
+<li>Shangshanqi - 3 Nights</li>
+<li>Shangshanqi - 4 Nights</li>
+<li>Taoyuan Hotspring International Hotel</li>
+<li>Vienna Hotel Chengdu</li>
+<li>Weihai Dawu Sea Feeling Hotel</li>
+<li>Wuyi Hot Spring Resort</li>
+<li>Wyndham Grand Qingdao - 3 Nights</li>
+<li>Wyndham Grand Qingdao-4 Nights</li>
+<li>Wyndham Grand Xian South - 3 Nights</li>
+<li>Wyndham Sanya Bay</li>
+<li>Xiqiang Homeland Hotel</li>
+<li>Xishuangbanna Mengsu Apartment Hotel - 3 Nights</li>
+<li>Xishuangbanna Mengsu Apartment Hotel - 4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Hong Kong</h2>
+<ul>
+<li>Metropark Hotel Kowloon - 3 Nights</li>
+<li>Metropark Hotel Kowloon-4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>India</h2>
+<ul>
+<li>Avalon Mussoorie</li>
+<li>Clifftop Club</li>
+<li>Clifftop Club - 3 Nights</li>
+<li>Clifftop Club - 4 Nights</li>
+<li>Country Inn, Bhimtal</li>
+<li>Daiwik Hotels Rameswaram</li>
+<li>Danta Resort</li>
+<li>Fort Chanwa Luni</li>
+<li>Hill Country Resorts-Kodaikanal</li>
+<li>Hotel Mayur</li>
+<li>Hotel Royal Ladakh</li>
+<li>Hotel Royal Ladakh - 3 Nights</li>
+<li>Hotel Royal Ladakh - 4 Nights</li>
+<li>Hotel Shevaroys</li>
+<li>JC Residency, Madurai</li>
+<li>Leonia Holistic Destination</li>
+<li>Lions Den Resort</li>
+<li>Lotus Suites, Goa</li>
+<li>Mantra Resort</li>
+<li>Mint Bundela Resort</li>
+<li>Mint Tarika Resort</li>
+<li>Mountain Club</li>
+<li>Neonz Lifestyle & Recreation Club</li>
+<li>Nest 'n Mist</li>
+<li>Nidhivan Sarovar Portico</li>
+<li>Palm Greens Club</li>
+<li>Palmarinha Resort & Suites</li>
+<li>Phoenix Resort</li>
+<li>Rainforest Resort</li>
+<li>Rainforest Resort - 3 Nights</li>
+<li>Rainforest Resort - 4 Nights</li>
+<li>Ramada Gurgaon Central</li>
+<li>Rangers Club Game Lodge</li>
+<li>Ras Resorts Silvassa</li>
+<li>Sanskruti Suites & Resort</li>
+<li>Sanskruti Suites & Resort - 4 Nights</li>
+<li>Shimla Havens Resort</li>
+<li>Sterling Dharamshala</li>
+<li>Sterling Anaikatti</li>
+<li>Sterling Corbett</li>
+<li>Sterling Corbett - 4 Nights</li>
+<li>Sterling Darjeeling</li>
+<li>Sterling Darjeeling - 3 Nights</li>
+<li>Sterling Darjeeling-4 Nights</li>
+<li>Sterling Goa - Varca</li>
+<li>Sterling Goa - Varca - 3 Nights</li>
+<li>Sterling Goa - Varca-4 Nights</li>
+<li>Sterling Kanha</li>
+<li>Sterling Kanha - 3 Nights</li>
+<li>Sterling Kanha - 4 Nights</li>
+<li>Sterling Karwar</li>
+<li>Sterling Karwar - 3 Nights</li>
+<li>Sterling Karwar-4 Nights</li>
+<li>Sterling Kodai - Lake</li>
+<li>Sterling Kodai - Lake - 3 Nights</li>
+<li>Sterling Kodai - Lake -4 Nights</li>
+<li>Sterling Kodai - Valley</li>
+<li>Sterling Kodai - Valley - 3 Nights</li>
+<li>Sterling Kodai - Valley - 4 Nights</li>
+<li>Sterling Kufri</li>
+<li>Sterling Lonavala</li>
+<li>Sterling Lonavala-4 Nights</li>
+<li>Sterling Manali</li>
+<li>Sterling Manali - 3 Nights</li>
+<li>Sterling Mount Abu</li>
+<li>Sterling Mount Abu - 3 Nights</li>
+<li>Sterling Mount Abu - 4 Nights</li>
+<li>Sterling Munnar</li>
+<li>Sterling Mussoorie</li>
+<li>Sterling Mussoorie - 3 Nights</li>
+<li>Sterling Mussoorie-4 Nights</li>
+<li>Sterling Nainital</li>
+<li>Sterling Nainital - 3 Nights</li>
+<li>Sterling Ooty - Elk Hill</li>
+<li>Sterling Ooty - Elk Hill - 3 Nights</li>
+<li>Sterling Ooty - Fern Hill</li>
+<li>Sterling Ooty - Fern Hill - 3 Nights</li>
+<li>Sterling Puri - 3 Nights</li>
+<li>Sterling Wayanad</li>
+<li>Sterling Wayanad - 3 Nights</li>
+<li>Sterling Wayanad - 4 Nights</li>
+<li>Sterling Yelagiri</li>
+<li>Sterling Yercaud</li>
+<li>Sterling Yercaud-4 Nights</li>
+<li>Summer Plaza Resort</li>
+<li>Summer Sands Beach Resort</li>
+<li>Summer Sands Beach Resort - 3 Nights</li>
+<li>Summer Sands Beach Resort - 4 Nights</li>
+<li>Symphony Palms Beach Resort - 3 Nights</li>
+<li>Symphony Palms Beach Resort - 4 Nights</li>
+<li>Symphony Samudra</li>
+<li>Symphony Samudra - 3 Nights</li>
+<li>Symphony Samudra - 4 Nights</li>
+<li>Tathastu Resorts</li>
+<li>The Ffort Holiday Klub</li>
+<li>The Golden Tusk</li>
+<li>The Lagoona Resort</li>
+<li>The Pride Sun Village Resort & Spa-Goa</li>
+<li>The Resort Country Club</li>
+<li>The Resort Country Club-3 Nights</li>
+<li>The Resort Country Club-4 Nights</li>
+<li>The Tall Trees, Munnar</li>
+<li>The Waterfront Shaw</li>
+<li>Timber Trail Heights</li>
+<li>Times Club Dwarka</li>
+<li>Times Flute Boutique Hotel</li>
+<li>Times Rajmahal</li>
+<li>Treasure Island</li>
+<li>Treat Beach Resort & Spa</li>
+<li>Treat Resort Silvassa</li>
+<li>VITS Mumbai</li>
+<li>Valencia Club Abu</li>
+<li>Vijayshree Heritage Village</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Indonesia</h2>
+<ul>
+<li>Bali Masari Villas & Spa - 3 Nights</li>
+<li>Bali Masari Villas & Spa-4 Nights</li>
+<li>Bali Seascape Beach Club</li>
+<li>Karma Mayura - 3 Nights</li>
+<li>Karma Mayura - 4 Nights</li>
+<li>Mayura A Karma Retreat</li>
+<li>Medewi Bay Retreat</li>
+<li>Rama Holidays@ Residence Petitenget</li>
+<li>Rama Residence Padma - 3 Nights</li>
+<li>Rama Residence Padma-4 Nights</li>
+<li>Ramayana Candidasa</li>
+<li>Ramayana Candidasa Rental - 3 Nights</li>
+<li>Ramayana Candidasa Rental - 4 Nights</li>
+<li>Risata Bali Resort & Spa</li>
+<li>Royal Candidasa</li>
+<li>Royal Jimbaran</li>
+<li>Royal Sanur</li>
+<li>The Swaha Hotel</li>
+<li>The Swaha Hotel - 3 Nights</li>
+<li>The Swaha Hotel - 4 Nights</li>
+<li>Wadari Ubud Retreat - 3 Nights</li>
+<li>Wadari Ubud Retreat - 4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Japan</h2>
+<ul>
+<li>Hotel Ambient Izukogen Annex-4 Nights</li>
+<li>Hotel Elsereine Osaka - 3 Nights</li>
+<li>Sapporo Excel Hotel Tokyu - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Malaysia</h2>
+<ul>
+<li>Avani Sepang Goldcoast Resort - 4 Nights</li>
+<li>Awana Genting Highlands Golf And Country Resort</li>
+<li>Bukit Gambang Resort City</li>
+<li>Citin Seacare Hotel Pudu by Compass Hospitality</li>
+<li>Citin Seacare Hotel Pudu by Compass Hospitality - 3 Nights</li>
+<li>Citin Seacare Hotel Pudu by Compass Hospitality - 4 Nights</li>
+<li>Citrus Hotel Johor Bahru by Compass Hospitality</li>
+<li>Citrus Hotel Johor Bahru by Compass Hospitality - 3 Nights</li>
+<li>Citrus Hotel Johor Bahru by Compass Hospitality - 4 Nights</li>
+<li>Damai Beach Resort</li>
+<li>Greenhill Resort</li>
+<li>KL Plaza Suites</li>
+<li>Leisure Cove</li>
+<li>Perdana Beach Resort</li>
+<li>Ramada Suites By Wyndham KLCC - 3 Nights</li>
+<li>Ramada Suites By Wyndham KLCC - 4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Philippines</h2>
+<ul>
+<li>Astoria Palawan</li>
+<li>Astoria Palawan - 3 Nights</li>
+<li>Astoria Palawan - 4 Nights</li>
+<li>Caliraya Resort Club</li>
+<li>Microtel By Wyndham Davao - 3 Nights</li>
+<li>Microtel By Wyndham Davao-4 Nights</li>
+<li>Microtel By Wyndham-Boracay-3 Nights</li>
+<li>Microtel By Wyndham-Boracay-4 Nights</li>
+<li>Microtel by Wyndham Puerto Princesa - 3 Nights</li>
+<li>Microtel by Wyndham Puerto Princesa - 4 Nights</li>
+<li>Oceana Bay Resort Vacation and Leisure Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Singapore</h2>
+<ul>
+<li>Days Hotel by Wyndham Singapore At Zhongshan Park - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>South Korea</h2>
+<ul>
+<li>Hotel Anytime - Seoul - 3 Nights</li>
+<li>Hotel Anytime - Seoul - 4 Nights</li>
+<li>Hotel Cocomo Seoul - 3 Nights</li>
+<li>Hotel Cocomo Seoul - 4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Sri Lanka</h2>
+<ul>
+<li>Arie Lagoon</li>
+<li>Arie Lagoon - 3 Nights</li>
+<li>Tisara Villas</li>
+<li>Tisara Villas - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Taiwan</h2>
+<ul>
+<li>Kentington Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Thailand</h2>
+<ul>
+<li>Aspen Suites Hotel Sukhumvit 2 - 3 Nights</li>
+<li>Aspen Suites Hotel Sukhumvit 2 - 4 Nights</li>
+<li>Chateau Dale Beach Resort</li>
+<li>Citrus Suites Sukhumvit 6 by Compass Hospitality - 3 Nights</li>
+<li>Citrus Suites Sukhumvit 6 by Compass Hospitality - 4 Nights</li>
+<li>Grand Tower Inn</li>
+<li>Hotel Royal Crown</li>
+<li>Interlux Club Royal</li>
+<li>Karma Royal Boat Lagoon - 3 Nights</li>
+<li>Karma Royal Boat Lagoon - 4 Nights</li>
+<li>LHC @ Allamanda Laguna Phuket - 3 Nights</li>
+<li>LHC @ Allamanda Laguna Phuket - 4 Nights</li>
+<li>Laguna Holiday Club Phuket Resort - 3 Nights</li>
+<li>Laguna Holiday Club Phuket Resort-4 Nights</li>
+<li>MTC Plus at Grand Tower Inn</li>
+<li>Saboey Resort And Villas - 4 Nights</li>
+<li>Saboey Resort and Villas - 3 Nights</li>
+<li>Saboey Resort and Villas - 7 Nights</li>
+<li>The Royal Bay View Villas - 3 Nights</li>
+<li>The Royal Bay View Villas - 4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Vietnam</h2>
+<ul>
+<li>FLC Grand Hotel Ha Long - 3 Nights</li>
+<li>FLC Grand Hotel Samson - 3 Nights</li>
+<li>FLC Grand Hotel Samson - 4 Nights</li>
+<li>FLC Luxury Vinh Phuc Resort - 3 Nights</li>
+<li>FLC Luxury Vinh Phuc Resort - 4 Nights</li>
+<li>FLC Quy Nhon Beach & Golf Resort - 4 Nights</li>
+<li>FLC Samson Beach & Golf Resort - 4 Nights</li>
+<li>Hotel Equatorial Ho Chi Minh City - 3 Nights</li>
+<li>Hotel Equatorial Ho Chi Minh City - 4 Nights</li>
+<li>Kosmos Apart Hotel - 4 Nights</li>
+<li>Kosmos Apart Hotel - 3 Nights</li>
+<li>Park Regis</li>
+<li>Salinda Resort Phu Quoc Island - 3 Nights</li>
+<li>Salinda Resort Phu Quoc Island - 4 Nights</li>
+<li>Wyndham Legend Halong - 3 Nights</li>
+</ul>
+</div>
+</div>
+
+<div class="continent">
+<h1 id="australia-south-pacific">🌏 AUSTRALIA / SOUTH PACIFIC</h1>
+
+<div class="country">
+<h2>Australia</h2>
+<ul>
+<li>Altitude Motel Apartments - 3 Nights</li>
+<li>Murray Valley Resort</li>
+<li>Nepean Country Club & Day Spa</li>
+<li>Oaks Broome - 3 Nights</li>
+<li>Oaks Calypso Plaza - 3 Nights</li>
+<li>Oaks Istay River City - 3 Nights</li>
+<li>Oaks Istay River City - 4 Nights Rental</li>
+<li>Oaks Metropole Hotel - 3 Nights</li>
+<li>Oaks Metropole Hotel - 4 Nights</li>
+<li>Oaks Oasis Resort - 3 Nights</li>
+<li>Oaks On Collins - 3 Nights</li>
+<li>Oaks Pacific Blue Resort - 3 Nights</li>
+<li>Oaks Pacific Blue Resort - 4 Nights</li>
+<li>Oaks Seaforth - 3 Nights</li>
+<li>Silkari Lagoons Port Douglas - 4 Nights</li>
+<li>Silkari Lagoons Port Douglas - 5 Nights</li>
+<li>The Moorings</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>New Zealand</h2>
+<ul>
+<li>Oaks Wellington Hotel - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Tahiti And Cook Islands</h2>
+<ul>
+<li>TradeWinds French Polynesia</li>
+</ul>
+</div>
+</div>
+
+<div class="continent">
+<h1 id="canada">🇨🇦 CANADA</h1>
+
+<div class="country">
+<h2>British Columbia</h2>
+<ul>
+<li>Destinations at Holiday Park</li>
+<li>Lake Okanagan Resort</li>
+<li>Panorama Vacation Retreat At Horsethief Lodge</li>
+<li>Sunchaser Vacation Villas At Riverside</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Ontario</h2>
+<ul>
+<li>Georgian Bay Hotel & Conference Centre</li>
+<li>Hilton Garden Inn Niagara-on-the-Lake - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Quebec</h2>
+<ul>
+<li>Club Vacances MSA</li>
+<li>Club Vacances le Plateau</li>
+<li>Condo Hotel le Lion D'Or</li>
+<li>Condo-Qubec Au Scandinave</li>
+<li>Privilege Mont-TremblantVoliere</li>
+</ul>
+</div>
+</div>
+
+<div class="continent">
+<h1 id="caribbean">🏝️ CARIBBEAN</h1>
+
+<div class="country">
+<h2>Aruba</h2>
+<ul>
+<li>Barcelo Aruba</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Bahamas</h2>
+<ul>
+<li>Island Seas Resort</li>
+<li>Mayfield Beach Resort</li>
+<li>Ocean Reef Yacht Club and Resort</li>
+<li>Seabreeze Vacation Villas & Marina</li>
+<li>The Marlin at Taino Beach</li>
+<li>The Ocean at Taino Beach</li>
+<li>Viva Vacation Club At Viva Wyndham Fortuna Beach</li>
+<li>Westwind Club</li>
+<li>Westwind II Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Barbados</h2>
+<ul>
+<li>South Beach Hotel</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Cayman Islands</h2>
+<ul>
+<li>Morritt's Grand Resort</li>
+<li>Morritt's Tortuga Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Dominican Republic</h2>
+<ul>
+<li>Acuarium Suite Resort</li>
+<li>Bppc @ Luxury Bahia Principe Bouganville</li>
+<li>Casa Marina Reef by VRC</li>
+<li>Circle at Paradisus Palma Real</li>
+<li>Club Melia At Paradisus Palma Real</li>
+<li>Club Meli at Meli Caribe Beach I</li>
+<li>Club Meli at Meli Caribe Beach II</li>
+<li>Dominican Fiesta Hotel & Casino - 3 Nights</li>
+<li>Dominican Fiesta Hotel & Casino - 4 Nights</li>
+<li>Emotions by Hodelpa Juan Dolio</li>
+<li>Emotions by Hodelpa Playa Dorada</li>
+<li>Fantasia Bahia Principe Punta Cana</li>
+<li>Forest Beach Club by Hodelpa</li>
+<li>Grand Bahia Principe Aquamarine</li>
+<li>Grand Bahia Principe El Portillo</li>
+<li>Grand Bahia Principe La Romana</li>
+<li>Grand Bahia Principe Punta Cana</li>
+<li>Grand Palladium Punta Cana Resort & Spa</li>
+<li>Grand Paradise Playa Dorada</li>
+<li>IBEROSTAR Bavaro</li>
+<li>IBEROSTAR Dominica</li>
+<li>IBEROSTAR Hacienda Dominicus</li>
+<li>Luxury Bahia Principe Ambar</li>
+<li>Luxury Bahia Principe Cayo Levantado</li>
+<li>Luxury Bahia Principe Esmeralda</li>
+<li>MVC at Meli Caribe Beach</li>
+<li>Nickelodeon Resort Punta Cana By Karisma</li>
+<li>Occidental Punta Cana</li>
+<li>Ocean Blue & Sand</li>
+<li>Presidential Suites By Lifestyle Puerto Plata</li>
+<li>Presidential Suites by Lifestyle - Cabarete</li>
+<li>Riviera Azul</li>
+<li>Senator Puerto Plata Spa Resort</li>
+<li>The Crown Suites at LHVC Resort</li>
+<li>The Crown Villas at LHVC Resort</li>
+<li>The Residence Suites at LHVC Resort</li>
+<li>The Tropical @ LHVC</li>
+<li>The Tropical at LHVC Resort</li>
+<li>TravelSmart at Royalton CHIC Punta Cana</li>
+<li>TravelSmart at Royalton Punta Cana</li>
+<li>TravelSmart at Royalton Splash Punta Cana</li>
+<li>Travelsmart at Royalton Bavaro</li>
+<li>Viva Vacation Club At Viva Wyndham Dominicus Beach</li>
+<li>Viva Vacation Club At Viva Wyndham Dominicus Palace</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Guadeloupe</h2>
+<ul>
+<li>Green Blue Houses</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Jamaica</h2>
+<ul>
+<li>BPPC @ Luxury Bahia Principe Runaway Bay</li>
+<li>Club Caribbean</li>
+<li>Grand Bahia Principe Jamaica</li>
+<li>Grand Palladium Jamaica Resort & Spa</li>
+<li>Grand Palladium Lady Hamilton Resort & Spa</li>
+<li>IBEROSTAR Grand Hotel Rose Hall</li>
+<li>IBEROSTAR Rose Hall Beach</li>
+<li>IBEROSTAR Rose Hall Suites</li>
+<li>Ocean Coral Spring</li>
+<li>TravelSmart at Royalton Blue Waters</li>
+<li>TravelSmart at Royalton Negril</li>
+<li>TravelSmart at Royalton White Sands</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Martinique</h2>
+<ul>
+<li>Diamant Beach Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Puerto Rico</h2>
+<ul>
+<li>AC Hotel San Juan Condado - 3 Nights</li>
+<li>Wyndham Rio Mar</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Saint Kitts And Nevis</h2>
+<ul>
+<li>Sugar Bay Club Suites & Hotel - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Saint Lucia</h2>
+<ul>
+<li>Oasis Marigot</li>
+<li>TravelSmart at Royalton St. Lucia</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Saint Martin</h2>
+<ul>
+<li>TradeWinds St. Martin</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>St Maarten</h2>
+<ul>
+<li>Sapphire Beach Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Tortola</h2>
+<ul>
+<li>TradeWinds British Virgin Islands</li>
+</ul>
+</div>
+</div>
+
+<div class="continent">
+<h1 id="central-south-america">🌎 CENTRAL / SOUTH AMERICA</h1>
+
+<div class="country">
+<h2>Angra Dos Reis</h2>
+<ul>
+<li>Samba Angra dos Reis</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Argentina</h2>
+<ul>
+<li>Apart del Lago</li>
+<li>Apartur Buenos Aires</li>
+<li>Apartur Mar del Plata</li>
+<li>Bahia Manzano</li>
+<li>Bahia Montana</li>
+<li>Design Suites and Towers</li>
+<li>Exclusive</li>
+<li>Hostal del Sol II</li>
+<li>Hotel y Resort Valle Grande</li>
+<li>Howard Johnson la Canada & Suites - 3 Nights</li>
+<li>Las Lomas del Correntoso</li>
+<li>Marges Tiempo Compartido</li>
+<li>Park Royal City Buenos Aires - 3 Nights</li>
+<li>Park Royal City Buenos Aires - 4 Nights</li>
+<li>Playa Palace</li>
+<li>Primacy Apart Hotel</li>
+<li>RCT Club Vacacional</li>
+<li>Rupu Pehun</li>
+<li>Vacances Centro</li>
+<li>Vacances Dorado</li>
+<li>Vacances Golf</li>
+<li>Villa Pirn Cabalango</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Belo Horizonte</h2>
+<ul>
+<li>Hotel Fazenda Pocos de Caldas</li>
+<li>Hotel Golden Park Pocos de Caldas</li>
+<li>Thermas Resort Walter World Pocos de Caldas</li>
+<li>Vilage Inn Pocos de Caldas</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Brazil Interior</h2>
+<ul>
+<li>Escarpas Do Lago Hotel</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Chile</h2>
+<ul>
+<li>Olmue Club Apart - 2 Nights</li>
+<li>Olmue Club Apart Hotel - 3 Nights</li>
+<li>Pucn II</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Colombia</h2>
+<ul>
+<li>City Express Plus Cali</li>
+<li>City Express Plus Cali - 3 Nights</li>
+<li>City Express Plus Cali - 4 Nights</li>
+<li>Decmeron Beach Resort Spa Baru</li>
+<li>Guadaira Resort</li>
+<li>Hotel Blue Cove</li>
+<li>Hotel Decmeron Cartagena</li>
+<li>Hotel Decmeron Galen</li>
+<li>Hotel Decmeron San Luis</li>
+<li>Hotel Muisca - 3 Nights</li>
+<li>Hotel Musica</li>
+<li>Hotel On Vacation Amazon</li>
+<li>Hotel Superdecmeron Marazul</li>
+<li>Las Aldeas Hoteles Resort</li>
+<li>Terrazas Tayrona</li>
+<li>Waya Guajira</li>
+<li>Wyndham Garden Villavicencio Hotel & Centro de Convenciones</li>
+<li>Wyndham Garden Villavicencio Hotel & Centro de Convenciones - 2 Nights</li>
+<li>Wyndham Garden Villavicencio Hotel & Centro de Convenciones - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Costa Rica</h2>
+<ul>
+<li>Blue River Resort & Hot Springs - 3 Nights</li>
+<li>Condovac La Costa LG - 3 Nights</li>
+<li>Hotel del Sur</li>
+<li>Occidental Papagayo <em>Adults Only</em></li>
+<li>Taranova-Villas Palmas</li>
+<li>Villas Sol Hotel & Beach Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Ecuador</h2>
+<ul>
+<li>Hillary Nature Resort</li>
+<li>Wyndham Manta Sail Plaza Hotel & Convention Center</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Florianopolis</h2>
+<ul>
+<li>Castelmar Hotel</li>
+<li>Costa Sul Beach Hotel</li>
+<li>Costao do Santinho Resort Golf & Spa</li>
+<li>Ingleses Holiday Resort</li>
+<li>Praia Brava Hotel</li>
+<li>Residencial Itapema Vacation Club</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Fortaleza</h2>
+<ul>
+<li>Acqua Beach Park Resort</li>
+<li>Brasil Tropical Residence</li>
+<li>Iracema Residence Service</li>
+<li>Oceani Beach Park Resort</li>
+<li>Plaza Praia Suites</li>
+<li>Suites Beach Park Resort</li>
+<li>Wellness Beach Park Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Foz Do Iguazu</h2>
+<ul>
+<li>Mabu Thermas & Resort</li>
+<li>My Mabu</li>
+<li>Wish Resort Golf Convention Foz do Iguacu</li>
+<li>Wynhdam Golden Foz Suites</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Goias</h2>
+<ul>
+<li>Bougainville Parque Hotel</li>
+<li>Caldas Termas Clube Hotel</li>
+<li>Hotel Giardino</li>
+<li>Hotel Turismo Rio Quente Resorts</li>
+<li>Jardins Da Lagoa Condo Resort</li>
+<li>Lagoa Quente Flat Hotel</li>
+<li>Resort Do Lago</li>
+<li>Ro Quente Vacation Villa</li>
+<li>Serra Madre Residence</li>
+<li>Thermas diRoma Hotel</li>
+<li>diRoma Exclusive</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Gramado</h2>
+<ul>
+<li>Gramado Exclusive Resort</li>
+<li>Hotel Casa da Montanha</li>
+<li>Residencial Pousada do Serrano</li>
+<li>Wish Serrano Resort & Convention Gramado</li>
+<li>Wyndham Gramado Termas Resort & Spa</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Guatemala</h2>
+<ul>
+<li>Hotel Soleil La Antigua - 3 Nights</li>
+<li>Hotel Soleil Pacifico - 4 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Maceio</h2>
+<ul>
+<li>Macei Mar Hotel</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Maranhao</h2>
+<ul>
+<li>Carnaubinha Praia Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Natal</h2>
+<ul>
+<li>AcquaPipa Resort</li>
+<li>Bello Mare Conforto</li>
+<li>Pipa Lagoa Hotel</li>
+<li>Praia Bonita Resort & Conventions</li>
+<li>Wish Natal by GJP</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Panama</h2>
+<ul>
+<li>Playa Blanca Beach Resort y Spa</li>
+<li>Playa Blanca Town Center</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Parana</h2>
+<ul>
+<li>Mabu Curitiba Business</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Recife</h2>
+<ul>
+<li>Hotel Marinas Tamandar</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Rio De Janeiro City</h2>
+<ul>
+<li>Flamboyant Hotel & Convention</li>
+<li>Ramada Encore Ribalta Rio Janeiro</li>
+<li>Samba Cabo Frio</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Rio De Janeiro</h2>
+<ul>
+<li>Royal Holiday- Rio Othon Palace - 3 Nights</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Rio De Janeiro Interior</h2>
+<ul>
+<li>Aldeia das Aguas - Quartier</li>
+<li>Complexo Hoteleiro Le Canton</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Salinopolis</h2>
+<ul>
+<li>Salinas Park Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Salvador</h2>
+<ul>
+<li>Gran Hotel Stella Maris Resort & Conventions</li>
+<li>Wish Hotel da Baha by GJP</li>
+<li>Wish Hotel da Baha by GJP</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Sao Paulo</h2>
+<ul>
+<li>Barretos Country Thermas Suites</li>
+<li>Bella Gramado</li>
+<li>Campo Belo Exclusive</li>
+<li>Campo Belo Exclusive</li>
+<li>Carpe Diem Boutique & Spa</li>
+<li>Condominio Amarilis Flat Service</li>
+<li>Nautico Clube Fronteira</li>
+<li>Novotel Itu Golf & Resort</li>
+<li>Pestana Sao Paulo</li>
+<li>Pousada Larimor - 3 Nights</li>
+<li>Wyndham Olimpia Royal Hotels</li>
+<li>Zagaia Eco Resort Hotel</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Uruguay</h2>
+<ul>
+<li>Green Park Private Club - 3 Nights</li>
+<li>Solanas Forest Resort</li>
+<li>Solanas Royalmar</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Venezuela</h2>
+<ul>
+<li>Casas Del Sol Hotel Suites & Beach Resort</li>
+<li>Complejo Turistico Hotel Venetur Cumana</li>
+<li>Complejo Turstico Y Recreacional Villa Caribe</li>
+<li>Conjunto Turstico Vacacional Cordillera</li>
+<li>Coral Suites Hotel & Resort</li>
+<li>Estancia La Vera Cruz</li>
+<li>Fiesta Inn Aguasal</li>
+<li>Gran Hotel Ccp Suites</li>
+<li>Guadalupe Resort</li>
+<li>Hippocampus Beach Resort</li>
+<li>Hippocampus Villas Resort</li>
+<li>Hotel Bahia Kangrejo & Suites</li>
+<li>Hotel Hacienda El Portete</li>
+<li>Hotel La Sierra Santo Domingo</li>
+<li>Hotel Lake Plaza</li>
+<li>Hotel Tibisay</li>
+<li>Hotel Venetur Margarita</li>
+<li>Islas del Sol Morrocoy Resort</li>
+<li>La Posada del Reino</li>
+<li>La Trucha Azul</li>
+<li>Marbellamar Resort & Beach Club</li>
+<li>Margabella Suites</li>
+<li>Margarita Dynasty</li>
+<li>Margarita Real Hotel Boutique & Vacation Club</li>
+<li>Margarita Village International Resort</li>
+<li>Musipan Resort</li>
+<li>Nueva Toledo International Timesharing</li>
+<li>Playa Sirena Resort</li>
+<li>Pramo La Culata Resort</li>
+<li>Sierra Linda Hotel Club De Montana</li>
+<li>Villa Chalet San Cristbal Hotel Resort</li>
+</ul>
+</div>
+</div>
+
+<div class="continent">
+<h1 id="europe">🇪🇺 EUROPE</h1>
+
+<div class="country">
+<h2>Andorra</h2>
+<ul>
+<li>Ona Dorada El Tarter</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Austria</h2>
+<ul>
+<li>Alpine Club by Diamond Resorts</li>
+<li>Clubhotel Cortina</li>
+<li>Ferienclub Bellevue - Mondi</li>
+<li>Ferienclub Grundlsee - Mondi</li>
+<li>Ferienclub Schloesslhof (Mondi)</li>
+<li>Golf - Und Ferienclub Amadeus</li>
+<li>Holiday Residence Warmbad</li>
+<li>Marco Polo Club Alpina</li>
+<li>St. Johann Alpenland Resort</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Bulgaria</h2>
+<ul>
+<li>Balkan Jewel Resort & Chalets</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Central France</h2>
+<ul>
+<li>Domaine De Gavaudun</li>
+</ul>
+</div>
+
+<div class="country">
+<h2>Central Italy</h2>
+<ul>
+<li>Borgo di Vagli</li>
+<li>Carpediem Assisi Living Club</li>
+<li>Dimore (truncated)</li>
+</ul>
+</div>
+</div>
+
+<hr>
+
+<p style="text-align: center; color: #666; margin-top: 40px;">
+<em>Document organized by State (USA) and Continent (Worldwide) | Total locations across multiple continents</em>
+</p>
 
 </body>
 </html>
